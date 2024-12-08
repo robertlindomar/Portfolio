@@ -1,0 +1,151 @@
+/* ==========================================
+   Configurações Globais
+   ========================================== */
+html {
+    scroll-behavior: smooth;
+    /* Rolagem suave para navegação */
+}
+
+/* ==========================================
+   Animações Keyframes
+   ========================================== */
+/* Animação de flutuação vertical */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animação de destaque com zoom suave */
+@keyframes highlightSection {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animação de fade-in-up */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==========================================
+   Classes de Animação
+   ========================================== */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+    background-color: rgba(16, 185, 129, 0.1);
+    /* Verde com transparência */
+    border: 1px solid rgba(6, 78, 59, 0.4);
+}
+
+.highlight {
+    animation: highlightSection 0.5s ease-in-out;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* ==========================================
+   Media Queries - Responsividade
+   ========================================== */
+/* Smartphones pequenos */
+@media (max-width: 320px) {
+    #hero .relative.flex.justify-center.md\:block {
+        display: none;
+        /* Oculta elemento específico em telas muito pequenas */
+    }
+}
+
+/* Smartphones médios */
+@media (max-width: 375px) {
+    #hero .relative.flex.justify-center.md\:block {
+        display: none;
+        /* Oculta elemento específico em telas pequenas */
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    #hero .relative.flex.justify-center.md\:block img {
+        width: 300px !important;
+        height: 300px !important;
+        aspect-ratio: 1 / 1;
+        /* Mantém imagem quadrada */
+    }
+}
+
+/* Melhorar a interatividade dos links da navbar */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #10b981;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Barra de progresso das habilidades */
+.skill-item .progress-bar {
+    background: var(--gradient-primary);
+}
+
+/* Atualizar variáveis de cor */
+:root {
+    --color-primary: #10b981;
+    --color-secondary: #064e3b;
+    --color-accent: #34d399;
+}
+
+/* Atualizar badges e elementos de destaque */
+.badge {
+    background-color: var(--color-primary);
+}
+
+/* Atualizar elementos de foco */
+*:focus {
+    outline-color: var(--color-primary);
+}

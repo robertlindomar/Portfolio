@@ -1,1 +1,459 @@
-Ola Mundo!
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Lindomar - Desenvolvedor Full Stack</title>
+    <meta name="description"
+        content="Portfólio de Robert Lindomar - Desenvolvedor Full Stack e estudante de Análise e Desenvolvimento de Sistemas">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Fonte Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/responsividade.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="bg-gray-50 font-[Poppins]">
+    <!-- Navbar Fixa -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-xl shadow-lg z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <span class="text-xl sm:text-2xl font-bold text-emerald-600 py-2">Robert Lindomar</span>
+                </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#hero" class="nav-link text-gray-700 hover:text-emerald-600 transition">Início</a>
+                        <a href="#sobre" class="nav-link text-gray-700 hover:text-emerald-600 transition">Sobre</a>
+                        <a href="#projetos"
+                            class="nav-link text-gray-700 hover:text-emerald-600 transition">Projetos</a>
+                        <a href="#habilidades"
+                            class="nav-link text-gray-700 hover:text-emerald-600 transition">Habilidades</a>
+                        <a href="#contato" class="nav-link text-gray-700 hover:text-emerald-600 transition">Contato</a>
+
+                        <a href="https://linkedin.com/in/seu-perfil"
+                            class="bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition transform hover:scale-105">
+                            Conectar
+                            <i class="fab fa-linkedin ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen overflow-hidden pt-24">
+        <!-- Background com efeito parallax -->
+        <div class="absolute inset-0">
+            <div
+                class="absolute inset-0 bg-[url('img/code-background.jpg')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-full transform scale-105">
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-emerald-950/95 via-gray-900/90 to-teal-950/95 backdrop-blur-sm">
+            </div>
+
+            <!-- Elementos decorativos -->
+            <div class="absolute inset-0 opacity-30">
+                <div
+                    class="absolute top-20 left-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl animate-blob">
+                </div>
+                <div
+                    class="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000">
+                </div>
+                <div
+                    class="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000">
+                </div>
+            </div>
+        </div>
+
+        <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between h-full py-12 md:py-20 gap-12">
+                <!-- Conteúdo textual -->
+                <div class="text-white max-w-xl w-full md:w-1/2 text-center md:text-left space-y-8 animate-fade-in-up">
+                    <div class="space-y-4">
+                        <span class="inline-block text-emerald-400 text-lg font-medium tracking-wider">👋 Olá, eu
+                            sou</span>
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                            <span
+                                class="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                                Desenvolvedor Full Stack
+                            </span>
+                            <br>
+                            <span class="text-3xl md:text-5xl text-gray-200">&amp; Estudante de ADS</span>
+                        </h1>
+                        <p class="text-gray-300 text-lg md:text-xl leading-relaxed">
+                            Transformando ideias em código e construindo o futuro digital com paixão e inovação
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#projetos"
+                            class="group relative px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full overflow-hidden shadow-lg hover:shadow-emerald-500/25 transition-all duration-300">
+                            <span
+                                class="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            <span class="relative flex items-center justify-center text-white font-medium">
+                                <i class="fas fa-code mr-2"></i>
+                                Ver Projetos
+                            </span>
+                        </a>
+                        <a href="#contato"
+                            class="group relative px-8 py-4 bg-transparent border-2 border-white/20 rounded-full overflow-hidden backdrop-blur-sm hover:border-emerald-400/50 transition-all duration-300">
+                            <span
+                                class="relative flex items-center justify-center text-white font-medium group-hover:text-emerald-400 transition-colors">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Contato
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4 justify-center md:justify-start pt-4">
+                        <a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagem de perfil -->
+                <div class="relative w-full md:w-1/2 flex justify-center animate-fade-in">
+                    <div class="relative group">
+                        <!-- Efeito de brilho -->
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt z-0">
+                        </div>
+
+                        <!-- Container da imagem -->
+                        <div class="relative z-10">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full blur-lg opacity-75 animate-pulse">
+                            </div>
+                            <img src="img/eu2.png" alt="Robert Lindomar"
+                                class="relative w-72 h-72 rounded-full object-cover border-4 border-white/20 shadow-2xl transform transition duration-500 group-hover:scale-105"
+                                loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Sobre Mim</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-graduation-cap text-2xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Formação</h3>
+                    <p class="text-gray-600 text-center">
+                        ADS - ADS - UNIFUNEC - Santa Fé do Sul<br>
+                        Previsão de conclusão: 2026
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-laptop-code text-2xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Experiência</h3>
+                    <p class="text-gray-600 text-center">
+                        Desenvolvedor Back-end Jr.<br>
+                        <span id="tempoExperiencia">
+                            Carregando tempo de experiência...
+                        </span>
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-rocket text-2xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Objetivos</h3>
+                    <p class="text-gray-600 text-center">
+                        Especialização em Full Stack<br>
+                        Desenvolvimento Web
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Meus Projetos</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="img/guto/capa.png" alt="Studio GutoTattoo"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Studio GutoTattoo</h3>
+                        <p class="text-gray-600 mb-4">Site de um estúdio de tatuagem</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Js</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800 font-medium">
+                                <i class="fab fa-github mr-2"></i>Código
+                            </a>
+                            <a href="http://gutotattoo.robertlindomar.tech"
+                                class="text-emerald-600 hover:text-emerald-800 font-medium" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="img/primeiroportfolio/capa.png" alt="Meu primeiro site"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Meu primeiro site</h3>
+                        <p class="text-gray-600 mb-4">Trabalho de DIW</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">CSS</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Js</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-emerald-600 hover:text-emerald-800 font-medium">
+                                <i class="fab fa-github mr-2"></i>Código
+                            </a>
+                            <a href="http://portfolio.robertlindomar.tech/portfolio.html"
+                                class="text-emerald-600 hover:text-emerald-800 font-medium" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Habilidades Técnicas</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Frontend -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-emerald-600">Frontend</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item group">
+                            <div class="flex justify-between mb-1">
+                                <span
+                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors">HTML/CSS/Tailwind</span>
+                                <span class="text-emerald-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 h-3 rounded-full transition-all duration-500 group-hover:from-emerald-600 group-hover:to-teal-600"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item group">
+                            <div class="flex justify-between mb-1">
+                                <span
+                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors">Tailwind</span>
+                                <span class="text-emerald-600">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 h-3 rounded-full transition-all duration-500 group-hover:from-emerald-600 group-hover:to-teal-600"
+                                    style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-emerald-600">Backend</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item group">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 group-hover:text-emerald-600 transition-colors">Java</span>
+                                <span class="text-emerald-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 h-3 rounded-full transition-all duration-500 group-hover:from-emerald-600 group-hover:to-teal-600"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item group">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 group-hover:text-emerald-600 transition-colors">PHP</span>
+                                <span class="text-emerald-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 h-3 rounded-full transition-all duration-500 group-hover:from-emerald-600 group-hover:to-teal-600"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item group">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 group-hover:text-emerald-600 transition-colors">C</span>
+                                <span class="text-emerald-600">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 h-3 rounded-full transition-all duration-500 group-hover:from-emerald-600 group-hover:to-teal-600"
+                                    style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Entre em Contato</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Informações de Contato -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-emerald-600">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-emerald-600 w-8"></i>
+                            <a href="mailto:seu-email@exemplo.com" class="text-gray-600 hover:text-emerald-600">
+                                seu-email@exemplo.com
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-emerald-600 w-8"></i>
+                            <a href="https://linkedin.com/in/seu-perfil" class="text-gray-600 hover:text-emerald-600">
+                                /in/seu-perfil
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-github text-emerald-600 w-8"></i>
+                            <a href="https://github.com/RobertLindomar" class="text-gray-600 hover:text-emerald-600">
+                                /RobertLindomar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato -->
+                <form class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="mb-6">
+                        <label for="nome" class="block text-gray-700 mb-2">Nome</label>
+                        <input type="text" id="nome" name="nome"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent">
+                    </div>
+                    <div class="mb-6">
+                        <label for="mensagem" class="block text-gray-700 mb-2">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition duration-300">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Robert Lindomar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/experience-timer.js"></script>
+
+    <!-- Adicione estes estilos ao seu arquivo CSS -->
+    <style>
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        @keyframes tilt {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .animate-tilt {
+            animation: tilt 10s infinite linear;
+        }
+    </style>
+</body>
+
+</html>
