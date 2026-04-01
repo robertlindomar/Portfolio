@@ -672,9 +672,15 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 Robert Lindomar. Todos os direitos reservados.</p>
+            <p class="copyright"></p>
         </div>
     </footer>
+
+    <script>
+        //pegue o ano atual e mostre no footer
+        const ano = new Date().getFullYear();
+        document.querySelector('.copyright').innerHTML = `&copy; ${ano} Robert Lindomar. Todos os direitos reservados.`;
+     </script>
 
     <!-- Scripts -->
     <script src="assets/js/experience-timer.js"></script>
