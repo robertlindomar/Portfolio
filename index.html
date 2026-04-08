@@ -1,56 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Lindomar - Desenvolvedor Full Stack</title>
+    <title>Robert Lindomar — Desenvolvedor backend e arquitetura de sistemas</title>
     <meta name="description"
-        content="Portfólio de Robert Lindomar - Desenvolvedor Full Stack e estudante de Análise e Desenvolvimento de Sistemas">
+        content="Desenvolvedor backend focado em APIs, microserviços e arquitetura. Java, Node.js e Rust. Microserviço de armazenamento de arquivos multi-tenant.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Fonte Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/responsividade.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/responsividade.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-
 <body class="bg-gray-50 font-[Poppins]">
-    <!-- Navbar Fixa -->
     <nav class="fixed w-full bg-white/80 backdrop-blur-xl shadow-lg z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
-                    <span class="text-xl sm:text-2xl font-bold text-emerald-600 py-2">Robert Lindomar</span>
+                    <a href="#hero" class="text-xl sm:text-2xl font-bold text-emerald-600 py-2">Robert Lindomar</a>
                 </div>
-                <!-- Menu Desktop -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-8">
-                        <a href="#hero" class="nav-link text-gray-700 hover:text-emerald-600 transition">Início</a>
-                        <a href="#sobre" class="nav-link text-gray-700 hover:text-emerald-600 transition">Sobre</a>
-                        <a href="#projetos"
-                            class="nav-link text-gray-700 hover:text-emerald-600 transition">Projetos</a>
-                        <a href="#habilidades"
-                            class="nav-link text-gray-700 hover:text-emerald-600 transition">Habilidades</a>
-                        <a href="#contato" class="nav-link text-gray-700 hover:text-emerald-600 transition">Contato</a>
-
-                        <a href="https://api.whatsapp.com/send?phone=5567998911380"
-                            class="bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition transform hover:scale-105"
-                            target="_blank">
-                            WhatsApp
-                            <i class="fab fa-whatsapp ml-2"></i>
-                        </a>
-                    </div>
+                <div class="hidden lg:flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm">
+                    <a href="#hero" class="nav-link text-gray-700 hover:text-emerald-600 transition">Início</a>
+                    <a href="#sobre" class="nav-link text-gray-700 hover:text-emerald-600 transition">Sobre</a>
+                    <a href="#destaque" class="nav-link text-gray-700 hover:text-emerald-600 transition">Destaque</a>
+                    <a href="#projetos" class="nav-link text-gray-700 hover:text-emerald-600 transition">Projetos</a>
+                    <a href="#habilidades" class="nav-link text-gray-700 hover:text-emerald-600 transition">Habilidades</a>
+                    <a href="#tecnologias" class="nav-link text-gray-700 hover:text-emerald-600 transition">Tecnologias</a>
+                    <a href="#contato" class="nav-link text-gray-700 hover:text-emerald-600 transition">Contato</a>
                 </div>
-
-                <!-- Botão Menu Mobile -->
                 <button id="mobile-menu-button"
-                    class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-emerald-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
+                    class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-emerald-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
+                    type="button"
                     aria-expanded="false">
                     <span class="sr-only">Abrir menu principal</span>
                     <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
+                        stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -58,31 +44,27 @@
             </div>
         </div>
 
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden">
+        <div id="mobile-menu" class="hidden lg:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
                 <a href="#hero"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Início</a>
                 <a href="#sobre"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Sobre</a>
+                <a href="#destaque"
+                    class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Destaque</a>
                 <a href="#projetos"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Projetos</a>
                 <a href="#habilidades"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Habilidades</a>
+                <a href="#tecnologias"
+                    class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Tecnologias</a>
                 <a href="#contato"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Contato</a>
-                <a href="https://api.whatsapp.com/send?phone=+5567998911380"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700"
-                    target="_blank">
-                    WhatsApp <i class="fab fa-whatsapp ml-2"></i>
-                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen overflow-hidden pt-24">
-        <!-- Background com efeito parallax -->
         <div class="absolute inset-0">
             <div
                 class="absolute inset-0 bg-[url('img/code-background.jpg')] bg-cover bg-fixed bg-center bg-no-repeat w-full h-full transform scale-105">
@@ -90,8 +72,6 @@
             <div
                 class="absolute inset-0 bg-gradient-to-br from-emerald-950/95 via-gray-900/90 to-teal-950/95 backdrop-blur-sm">
             </div>
-
-            <!-- Elementos decorativos -->
             <div class="absolute inset-0 opacity-30">
                 <div
                     class="absolute top-20 left-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl animate-blob">
@@ -107,76 +87,67 @@
 
         <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between h-full py-12 md:py-20 gap-12">
-                <!-- Conteúdo textual -->
                 <div class="text-white max-w-xl w-full md:w-1/2 text-center md:text-left space-y-8 animate-fade-in-up">
                     <div class="space-y-4">
-                        <span class="inline-block text-emerald-400 text-lg font-medium tracking-wider">👋 Olá, eu
-                            sou Robert Lindomar</span>
-                        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                        <span class="inline-block text-emerald-400 text-lg font-medium tracking-wider">Robert
+                            Lindomar</span>
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
                             <span
                                 class="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                                Desenvolvedor Full Stack
+                                Desenvolvedor backend e arquitetura de sistemas
                             </span>
-                            <br>
-                            <span class="text-3xl md:text-5xl text-gray-200">&amp; Estudante de ADS</span>
                         </h1>
                         <p class="text-gray-300 text-lg md:text-xl leading-relaxed">
-                            Transformando ideias em código e construindo o futuro digital com paixão e inovação
+                            Projeto e implemento APIs e microserviços, com foco em organização de código, integração
+                            entre sistemas e soluções reutilizáveis que reduzem retrabalho.
                         </p>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#projetos"
+                        <a href="#destaque"
                             class="group relative px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full overflow-hidden shadow-lg hover:shadow-emerald-500/25 transition-all duration-300">
                             <span
                                 class="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                             <span class="relative flex items-center justify-center text-white font-medium">
-                                <i class="fas fa-code mr-2"></i>
-                                Ver Projetos
+                                <i class="fas fa-star mr-2" aria-hidden="true"></i>
+                                Projeto em destaque
                             </span>
                         </a>
                         <a href="#contato"
                             class="group relative px-8 py-4 bg-transparent border-2 border-white/20 rounded-full overflow-hidden backdrop-blur-sm hover:border-emerald-400/50 transition-all duration-300">
                             <span
                                 class="relative flex items-center justify-center text-white font-medium group-hover:text-emerald-400 transition-colors">
-                                <i class="fas fa-envelope mr-2"></i>
+                                <i class="fas fa-envelope mr-2" aria-hidden="true"></i>
                                 Contato
                             </span>
                         </a>
                     </div>
 
-                    <!-- Social Links -->
                     <div class="flex gap-4 justify-center md:justify-start pt-4">
-                        <a href="https://github.com/robertlindomar"
-                            class="text-gray-400 hover:text-emerald-400 transition-colors">
-                            <i class="fab fa-github text-2xl"></i>
+                        <a href="https://github.com/robertlindomar" class="text-gray-400 hover:text-emerald-400 transition-colors"
+                            target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github text-2xl" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/robert-lindomar-672312321/"
-                            class="text-gray-400 hover:text-emerald-400 transition-colors">
-                            <i class="fab fa-linkedin text-2xl"></i>
+                            class="text-gray-400 hover:text-emerald-400 transition-colors" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-2xl" aria-hidden="true"></i>
                         </a>
-                        <!-- <a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">
-                            <i class="fab fa-twitter text-2xl"></i>
-                        </a> -->
                     </div>
                 </div>
 
-                <!-- Imagem de perfil -->
                 <div class="relative w-full md:w-1/2 flex justify-center animate-fade-in">
                     <div class="relative group">
-                        <!-- Efeito de brilho -->
                         <div
                             class="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt z-0">
                         </div>
-
-                        <!-- Container da imagem -->
                         <div class="relative z-10">
                             <div
                                 class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full blur-lg opacity-75 animate-pulse">
                             </div>
                             <img src="img/eu2.png" alt="Robert Lindomar"
                                 class="relative w-72 h-72 rounded-full object-cover border-4 border-white/20 shadow-2xl transform transition duration-500 group-hover:scale-105"
-                                loading="eager">
+                                width="288" height="288" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -184,492 +155,349 @@
         </div>
     </section>
 
-    <!-- Seção Sobre -->
     <section id="sobre" class="py-20 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">Sobre mim</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg text-gray-700 leading-relaxed space-y-6">
+                <p>
+                    Trabalho com <strong>Java</strong> e <strong>Node.js</strong> no dia a dia e venho aprofundando
+                    <strong>Rust</strong> onde faz sentido para performance e segurança. Ao longo de vários sistemas reais,
+                    percebi um padrão incômodo: a mesma lógica de <strong>upload e armazenamento</strong> reaparecia
+                    projeto após projeto.
+                </p>
+                <p>
+                    Em vez de repetir implementações, passei a tratar isso como problema de <strong>arquitetura</strong>:
+                    centralizar responsabilidades, padronizar contratos e permitir evolução sem acoplamento. Isso me levou
+                    a construir um <strong>microserviço em Rust</strong> para armazenamento de arquivos, com isolamento
+                    por projeto e autenticação por chave.
+                </p>
+                <p>
+                    Hoje meu foco é <strong>backend</strong>, <strong>desenho de serviços</strong> e
+                    <strong>código reutilizável</strong> que outros times consigam consumir com clareza.
+                </p>
+                <p class="text-sm text-gray-500 border-t border-gray-100 pt-6">
+                    <strong>Formação:</strong> Análise e Desenvolvimento de Sistemas, UNIFUNEC — Santa Fé do Sul (conclusão
+                    prevista 2026).
+                    <strong class="block sm:inline sm:ml-2 mt-1 sm:mt-0">Atuação:</strong> desenvolvedor backend júnior
+                    na CodiTech desde outubro de 2024.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="destaque" class="py-20 bg-gray-100 px-4">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Sobre Mim</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Projeto em destaque</h2>
             <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e inovação
+                Microserviço pensado para eliminar duplicação e padronizar armazenamento entre aplicações.
             </p>
 
+            <article
+                class="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100 lg:flex lg:items-stretch">
+                <div class="lg:w-2/5 bg-gradient-to-br from-emerald-900 to-teal-900 p-10 flex flex-col justify-center items-center text-center">
+                    <div class="w-24 h-24 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-4xl text-emerald-300" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">File Storage Service</h3>
+                    <p class="text-emerald-100/90 text-sm mb-6">Rust · API REST · armazenamento centralizado</p>
+                    <div class="flex flex-col sm:flex-row gap-3 w-full max-w-xs">
+                        <a href="https://github.com/robertlindomar/file-storage-rust"
+                            class="flex-1 text-center px-4 py-3 rounded-lg bg-white text-emerald-900 font-medium hover:bg-emerald-50 transition"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github mr-2" aria-hidden="true"></i>Código no GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-3/5 p-8 lg:p-10 space-y-8">
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Problema</h4>
+                        <p class="text-gray-700">
+                            Uploads e regras de armazenamento repetidos em várias aplicações, gerando manutenção
+                            dispersa, inconsistência e dificuldade para evoluir políticas (nomes, pastas, limites) de
+                            forma uniforme.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Solução</h4>
+                        <p class="text-gray-700">
+                            Microserviço dedicado ao <strong>armazenamento de arquivos</strong>, com API explícita para
+                            upload, download e metadados. Os demais sistemas passam a consumir um único serviço — um
+                            <strong>mini S3 interno</strong>, com contrato estável.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Tecnologias</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Rust</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">HTTP / REST</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Persistência em disco
+                                (conforme desenho)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Diferenciais</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Substitui uploads duplicados: uma implementação, vários clientes.</li>
+                            <li><strong>Multi-tenant</strong> por projeto ou cliente, com segregação de dados.</li>
+                            <li><strong>API key por projeto</strong> para autenticação e controle de acesso.</li>
+                            <li>Base única para políticas de armazenamento, nomes e limites.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Outros projetos</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Entregas web com foco em negócio: menos atrito para o usuário final e comunicação clara do serviço.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="img/espacocarioca/capa.png" alt="Cardápio digital Espaço Carioca"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Cardápio digital — Espaço Carioca</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Canal digital de cardápio e pedido pelo celular: cliente
+                            consulta itens sem cardápio físico e o estabelecimento atualiza ofertas com menos atrito
+                            operacional.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>O que resolve:</strong> experiência simples no
+                            salão e comunicação visual dos pratos.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <a href="https://espacocarioca.digiproltda.com.br"
+                            class="text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Visitar
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="img/guto/capa.png" alt="Site estúdio Arte na Pele"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Arte na Pele — estúdio de tatuagem</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Site para exibir portfólio, estilos e facilitar contato e
+                            agendamento, com layout direto ao ponto para conversão.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>O que resolve:</strong> vitrine profissional e
+                            captação de leads qualificados.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <a href="http://gutotattoo.robertlindomar.tech"
+                            class="text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col md:col-span-2 lg:col-span-1">
+                    <div class="relative overflow-hidden">
+                        <img src="img/digipro/capa.png" alt="Site institucional DigiPro"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">DigiPro — marketing digital</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Site institucional com serviços, prova social e pontos de
+                            contato para captação de leads em marketing e tráfego pago.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>O que resolve:</strong> presença digital alinhada
+                            à oferta comercial da agência.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <a href="https://digiproltda.com.br"
+                            class="text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Visitar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Habilidades</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Capacidades de engenharia aplicadas em projetos reais — além da lista de ferramentas.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                            <i class="fas fa-plug text-emerald-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">APIs REST</h3>
+                            <p class="text-gray-600 text-sm">Contratos claros, recursos bem definidos e versionamento
+                                pragmático.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                            <i class="fas fa-layer-group text-emerald-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Arquitetura em camadas</h3>
+                            <p class="text-gray-600 text-sm">Separação entre domínio, integração e infraestrutura quando
+                                o contexto exige.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                            <i class="fas fa-cubes text-emerald-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Microserviços</h3>
+                            <p class="text-gray-600 text-sm">Serviços com fronteiras claras, integração por API e
+                                isolamento de responsabilidades.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                            <i class="fas fa-exchange-alt text-emerald-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Integração entre sistemas</h3>
+                            <p class="text-gray-600 text-sm">Consumo e exposição de APIs, autenticação por chave e
+                                contratos estáveis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                            <i class="fas fa-database text-emerald-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Bancos relacionais</h3>
+                            <p class="text-gray-600 text-sm">Modelagem e consultas em cenários de aplicação reais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0">
+                            <i class="fab fa-docker text-emerald-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-1">Deploy e infraestrutura</h3>
+                            <p class="text-gray-600 text-sm">Containerização com Docker e operação em VPS quando o
+                                projeto demanda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Tecnologias</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Stack que uso no backend, dados e infraestrutura. Para sites institucionais, também trabalho com HTML,
+                CSS, JavaScript e Tailwind.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-graduation-cap text-2xl text-emerald-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-2">Formação</h3>
-                    <p class="text-gray-600 text-center">
-                        ADS - ADS - UNIFUNEC - Santa Fé do Sul<br>
-                        Previsão de conclusão: 2026
-                    </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-emerald-500">
+                    <h3 class="text-lg font-semibold text-emerald-700 mb-4">Backend</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Java</li>
+                        <li>Node.js</li>
+                        <li>Rust</li>
+                    </ul>
                 </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-laptop-code text-2xl text-emerald-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-2">Experiência</h3>
-                    <p class="text-gray-600 text-center">
-                        Desenvolvedor Back-end Jr.<br>
-                        <span id="tempoExperiencia">
-                            Carregando tempo de experiência...
-                        </span>
-                    </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <h3 class="text-lg font-semibold text-teal-700 mb-4">Banco de dados</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                    </ul>
                 </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <i class="fas fa-rocket text-2xl text-emerald-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-2">Objetivos</h3>
-                    <p class="text-gray-600 text-center">
-                        Especialização em Full Stack<br>
-                        Desenvolvimento Web
-                    </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-cyan-600">
+                    <h3 class="text-lg font-semibold text-cyan-800 mb-4">Infraestrutura</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Docker</li>
+                        <li>VPS</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Projetos -->
-    <section id="projetos" class="py-20 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Meus Projetos</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projeto 1 -->
-                <div
-                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
-                    <div class="relative overflow-hidden">
-                        <img src="img/espacocarioca/capa.png" alt="Espaço Carioca"
-                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col h-full">
-                        <h3 class="text-xl font-semibold mb-2">Cardápio Digital – Espaço Carioca</h3>
-                        <p class="text-gray-600 mb-4">Uma solução moderna para restaurantes e lanchonetes substituírem
-                            cardápios físicos por uma versão digital interativa. Com um sistema otimizado, os clientes
-                            acessam o cardápio diretamente pelo celular, visualizam os pratos e realizam pedidos de
-                            forma prática e intuitiva.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Tailwind</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Js</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <!-- <a href="#" class="text-emerald-600 hover:text-emerald-800 font-medium">
-                                <i class="fab fa-github mr-2"></i>Código
-                            </a> -->
-                            <a href="https://espacocarioca.digiproltda.com.br"
-                                class="text-emerald-600 hover:text-emerald-800 font-medium" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt mr-2"></i>Visitar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Projeto 2 -->
-                <div
-                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
-                    <div class="relative overflow-hidden">
-                        <img src="img/guto/capa.png" alt="Studio GutoTattoo"
-                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Arte na Pele – Estúdio de Tatuagem</h3>
-                        <p class="text-gray-600 mb-4">m site desenvolvido para um estúdio de tatuagem, destacando os
-                            trabalhos dos artistas e oferecendo uma experiência imersiva. Com um design moderno e
-                            intuitivo, os clientes podem visualizar portfólios, conhecer os estilos de tatuagem e
-                            agendar sessões de forma prática e rápida.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Tailwind</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Js</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <!-- <a href="#" class="text-emerald-600 hover:text-emerald-800 font-medium">
-                                <i class="fab fa-github mr-2"></i>Código
-                            </a> -->
-                            <a href="http://gutotattoo.robertlindomar.tech"
-                                class="text-emerald-600 hover:text-emerald-800 font-medium" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt mr-2"></i>Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 3 -->
-                <div
-                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group">
-                    <div class="relative overflow-hidden">
-                        <img src="img/digipro/capa.png" alt="Meu primeiro site"
-                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">DigiPro – Soluções Digitais em Marketing</h3>
-                        <p class="text-gray-600 mb-4">Um site institucional desenvolvido para a DigiPro, uma empresa
-                            especializada em marketing digital e tráfego pago. Com um layout estratégico e otimizado, o
-                            site apresenta serviços, cases de sucesso e permite a captação de leads, ajudando empresas a
-                            potencializarem sua presença digital.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Tailwind</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-sm">Js</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <!-- <a href="#" class="text-emerald-600 hover:text-emerald-800 font-medium">
-                                <i class="fab fa-github mr-2"></i>Código
-                            </a> -->
-                            <a href="https://digiproltda.com.br"
-                                class="text-emerald-600 hover:text-emerald-800 font-medium" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt mr-2"></i>Visitar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Habilidades -->
-    <section id="habilidades" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Habilidades Técnicas</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Desenvolvedor Back-end com conhecimentos em PHP e Spring Boot, além de capacidade de adaptação e
-                customização de templates front-end
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Backend -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-server text-xl text-emerald-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-emerald-600">Back-end</h3>
-                    </div>
-                    <div class="space-y-5">
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-php mr-2 text-lg"></i>
-                                    PHP
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-600 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Desenvolvimento de APIs, sistemas e integrações</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-java mr-2 text-lg"></i>
-                                    Java
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-500 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Desenvolvimento de aplicações e microserviços</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-leaf mr-2 text-lg"></i>
-                                    Spring Boot
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-500 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Criação de APIs RESTful e aplicações web</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-database mr-2 text-lg"></i>
-                                    SQL
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-500 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Modelagem e otimização de consultas</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-code mr-2 text-lg"></i>
-                                    C
-                                </span>
-                                <!-- <span class="px-3 py-1 text-sm bg-emerald-300 text-white rounded-full">Básico</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Conhecimentos fundamentais da linguagem</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Frontend -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-laptop-code text-xl text-emerald-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-emerald-600">Front-end</h3>
-                    </div>
-                    <div class="space-y-5">
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-html5 mr-2 text-lg"></i>
-                                    HTML
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-500 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Estruturação de páginas e semântica</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-css3-alt mr-2 text-lg"></i>
-                                    CSS
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-400 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Estilização e layouts responsivos</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-js mr-2 text-lg"></i>
-                                    JavaScript
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-400 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Interatividade e consumo de APIs</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-bootstrap mr-2 text-lg"></i>
-                                    Bootstrap
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-500 text-white rounded-full">Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Construção de interfaces modernas</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                                        alt="Tailwind CSS" width="24" style="filter: grayscale(100%) brightness(40%);">
-
-
-                                    Tailwind CSS
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-400 text-white rounded-full">Iniciante-Intermediário</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Customização de componentes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ferramentas e Outros -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-tools text-xl text-emerald-600"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-emerald-600">Ferramentas & Outros</h3>
-                    </div>
-                    <div class="space-y-5">
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fab fa-git-alt mr-2 text-lg"></i>
-                                    Git
-                                </span>
-                                <!-- <span class="px-3 py-1 text-sm bg-emerald-300 text-white rounded-full">Básico</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Controle de versão e colaboração</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-terminal mr-2 text-lg"></i>
-                                    Linha de Comando
-                                </span>
-                                <!-- <span class="px-3 py-1 text-sm bg-emerald-300 text-white rounded-full">Básico</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Automação e gerenciamento de projetos</p>
-                        </div>
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-brain mr-2 text-lg"></i>
-                                    AI para Desenvolvimento
-                                </span>
-                                <!-- <span class="px-3 py-1 text-sm bg-emerald-600 text-white rounded-full">Avançado</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Utilização de IA para acelerar desenvolvimento</p>
-                        </div>
-                        <!-- <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-docker mr-2 text-lg"></i>
-                                    Docker
-                                </span>
-                                <span class="px-3 py-1 text-sm bg-emerald-300 text-white rounded-full">Básico</span>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Containerização de aplicações</p>
-                        </div> -->
-                        <div class="skill-item group">
-                            <div class="flex items-center justify-between mb-1">
-                                <span
-                                    class="text-gray-700 group-hover:text-emerald-600 transition-colors flex items-center">
-                                    <i class="fas fa-sitemap mr-2 text-lg"></i>
-                                    REST API
-                                </span>
-                                <!-- <span
-                                    class="px-3 py-1 text-sm bg-emerald-500 text-white rounded-full">Intermediário-Avançado</span> -->
-                            </div>
-                            <p class="text-sm text-gray-500 mt-1">Design e implementação de APIs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Metodologia de trabalho -->
-            <div class="mt-16 bg-white p-8 rounded-xl shadow-lg">
-                <h3 class="text-2xl font-semibold mb-6 text-center text-emerald-600">Minha abordagem de trabalho</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="p-4 border border-gray-200 rounded-lg hover:border-emerald-400 transition-colors group">
-                        <div
-                            class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
-                            <i class="fas fa-code-branch text-xl text-emerald-600"></i>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2 text-gray-800">Arquitetura Sólida</h4>
-                        <p class="text-gray-600">Construo aplicações com estruturas bem definidas, seguindo boas
-                            práticas de desenvolvimento.</p>
-                    </div>
-                    <div class="p-4 border border-gray-200 rounded-lg hover:border-emerald-400 transition-colors group">
-                        <div
-                            class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
-                            <i class="fas fa-shield-alt text-xl text-emerald-600"></i>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2 text-gray-800">Segurança</h4>
-                        <p class="text-gray-600">Implemento práticas de segurança para proteger dados e prevenir
-                            vulnerabilidades comuns.</p>
-                    </div>
-                    <div class="p-4 border border-gray-200 rounded-lg hover:border-emerald-400 transition-colors group">
-                        <div
-                            class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
-                            <i class="fas fa-tachometer-alt text-xl text-emerald-600"></i>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2 text-gray-800">Desempenho</h4>
-                        <p class="text-gray-600">Otimizo consultas e código para garantir velocidade e eficiência das
-                            aplicações.</p>
-                    </div>
-                    <div class="p-4 border border-gray-200 rounded-lg hover:border-emerald-400 transition-colors group">
-                        <div
-                            class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
-                            <i class="fas fa-sync-alt text-xl text-emerald-600"></i>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2 text-gray-800">Adaptabilidade</h4>
-                        <p class="text-gray-600">Desenvolvo soluções flexíveis e escaláveis que podem evoluir conforme
-                            as necessidades.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Contato -->
     <section id="contato" class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Entre em Contato</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Informações de Contato -->
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-6 text-emerald-600">Informações de Contato</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-emerald-600 w-8"></i>
-                            <a href="mailto:robertlindomar18@gmail.com" class="text-gray-600 hover:text-emerald-600">
-                                robertlindomar18@gmail.com
-                            </a>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fab fa-linkedin text-emerald-600 w-8"></i>
-                            <a href="https://www.linkedin.com/in/robert-lindomar-672312321/"
-                                class="text-gray-600 hover:text-emerald-600">
-                                /in/Robert-Lindomar
-                            </a>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fab fa-github text-emerald-600 w-8"></i>
-                            <a href="https://github.com/RobertLindomar" class="text-gray-600 hover:text-emerald-600">
-                                /RobertLindomar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulário de Contato -->
-                <form class="bg-white p-8 rounded-xl shadow-lg">
-                    <div class="mb-6">
-                        <label for="nome" class="block text-gray-700 mb-2">Nome</label>
-                        <input type="text" id="nome" name="nome"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent">
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-gray-700 mb-2">Email</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent">
-                    </div>
-                    <div class="mb-6">
-                        <label for="mensagem" class="block text-gray-700 mb-2">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="4"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition duration-300">
-                        Enviar Mensagem
-                    </button>
-                </form>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Contato</h2>
+            <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+                Prefiro conversas objetivas sobre oportunidades, arquitetura ou código aberto.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <a href="https://github.com/robertlindomar"
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center group border border-transparent hover:border-emerald-200"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github text-4xl text-gray-800 group-hover:text-emerald-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="font-semibold text-gray-900 mb-1">GitHub</h3>
+                    <p class="text-sm text-emerald-600">github.com/robertlindomar</p>
+                </a>
+                <a href="https://www.linkedin.com/in/robert-lindomar-672312321/"
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center group border border-transparent hover:border-emerald-200"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin text-4xl text-gray-800 group-hover:text-emerald-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="font-semibold text-gray-900 mb-1">LinkedIn</h3>
+                    <p class="text-sm text-emerald-600">/in/robert-lindomar</p>
+                </a>
+                <a href="mailto:robertlindomar18@gmail.com"
+                    class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center group border border-transparent hover:border-emerald-200">
+                    <i class="fas fa-envelope text-4xl text-gray-800 group-hover:text-emerald-600 mb-4" aria-hidden="true"></i>
+                    <h3 class="font-semibold text-gray-900 mb-1">E-mail</h3>
+                    <p class="text-sm text-emerald-600 break-all">robertlindomar18@gmail.com</p>
+                </a>
             </div>
+            <p class="text-center text-sm text-gray-500 mt-10">
+                WhatsApp (opcional):
+                <a href="https://api.whatsapp.com/send?phone=5567998911380" class="text-emerald-600 hover:underline"
+                    target="_blank" rel="noopener noreferrer">+55 67 99891-1380</a>
+            </p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="copyright"></p>
@@ -677,89 +505,52 @@
     </footer>
 
     <script>
-        //pegue o ano atual e mostre no footer
         const ano = new Date().getFullYear();
-        document.querySelector('.copyright').innerHTML = `&copy; ${ano} Robert Lindomar. Todos os direitos reservados.`;
-     </script>
+        document.querySelector('.copyright').textContent = '\u00A9 ' + ano + ' Robert Lindomar. Todos os direitos reservados.';
+    </script>
 
-    <!-- Scripts -->
-    <script src="assets/js/experience-timer.js"></script>
-
-    <!-- Adicione estes estilos ao seu arquivo CSS -->
     <style>
         @keyframes blob {
-            0% {
-                transform: translate(0px, 0px) scale(1);
-            }
-
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-
-            100% {
-                transform: translate(0px, 0px) scale(1);
-            }
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
         }
-
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
         @keyframes tilt {
-
-            0%,
-            100% {
-                transform: rotate(-3deg);
-            }
-
-            50% {
-                transform: rotate(3deg);
-            }
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
         }
-
-        .animate-tilt {
-            animation: tilt 10s infinite linear;
-        }
+        .animate-tilt { animation: tilt 10s infinite linear; }
     </style>
 
-    <!-- Adicione antes do fechamento do body -->
     <script>
-        // Menu Mobile Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-        mobileMenuButton.addEventListener('click', () => {
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
         });
 
-        // Fechar menu ao clicar em um link
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Fechar menu ao clicar fora
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             }
         });
 
-        // Ajuste da navegação fixa
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 0) {
@@ -768,34 +559,6 @@
                 nav.classList.remove('shadow-lg', 'bg-white/95');
             }
         });
-
-
-        //whatsapp form
-        // Enviar mensagem para WhatsApp
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const mensagem = document.getElementById('mensagem').value;
-
-            const whatsappNumber = '+5567998911380'; // Substitua pelo seu número do WhatsApp
-            const whatsappMessage = `Nome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`;
-            const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
-
-            limparFormulario();
-
-            window.open(whatsappURL, '_blank');
-
-        });
-
-        function limparFormulario() {
-            document.getElementById('nome').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('mensagem').value = '';
-        }
-
     </script>
 </body>
 
