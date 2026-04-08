@@ -155,32 +155,115 @@
         </div>
     </section>
 
-    <section id="sobre" class="py-20 px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">Sobre mim</h2>
-            <div class="bg-white p-8 rounded-xl shadow-lg text-gray-700 leading-relaxed space-y-6">
-                <p>
-                    Trabalho com <strong>Java</strong> e <strong>Node.js</strong> no dia a dia e venho aprofundando
-                    <strong>Rust</strong> onde faz sentido para performance e segurança. Ao longo de vários sistemas reais,
-                    percebi um padrão incômodo: a mesma lógica de <strong>upload e armazenamento</strong> reaparecia
-                    projeto após projeto.
+    <section id="sobre" class="relative py-24 px-4 sm:px-6 overflow-hidden">
+        <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 via-white to-emerald-50/50">
+        </div>
+        <div class="pointer-events-none absolute top-24 right-0 h-72 w-72 rounded-full bg-emerald-300/25 blur-3xl -z-10">
+        </div>
+        <div class="pointer-events-none absolute bottom-16 left-0 h-64 w-64 rounded-full bg-teal-300/20 blur-3xl -z-10">
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            <header class="text-center mb-14 sm:mb-16">
+                <p class="text-emerald-600 font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-3">Trajetória
                 </p>
-                <p>
-                    Em vez de repetir implementações, passei a tratar isso como problema de <strong>arquitetura</strong>:
-                    centralizar responsabilidades, padronizar contratos e permitir evolução sem acoplamento. Isso me levou
-                    a construir um <strong>microserviço em Rust</strong> para armazenamento de arquivos, com isolamento
-                    por projeto e autenticação por chave.
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Sobre mim</h2>
+                <div class="mt-5 mx-auto h-1 w-14 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400"
+                    aria-hidden="true"></div>
+                <p class="mt-5 text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Backend, arquitetura e serviços que outros sistemas consomem com contrato claro.
                 </p>
-                <p>
-                    Hoje meu foco é <strong>backend</strong>, <strong>desenho de serviços</strong> e
-                    <strong>código reutilizável</strong> que outros times consigam consumir com clareza.
-                </p>
-                <p class="text-sm text-gray-500 border-t border-gray-100 pt-6">
-                    <strong>Formação:</strong> Análise e Desenvolvimento de Sistemas, UNIFUNEC — Santa Fé do Sul (conclusão
-                    prevista 2026).
-                    <strong class="block sm:inline sm:ml-2 mt-1 sm:mt-0">Atuação:</strong> desenvolvedor backend júnior
-                    na CodiTech desde outubro de 2024.
-                </p>
+            </header>
+
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                <div class="lg:col-span-7 xl:col-span-8">
+                    <article
+                        class="relative h-full rounded-2xl bg-white/90 backdrop-blur-sm p-8 sm:p-10 shadow-xl shadow-emerald-900/5 ring-1 ring-gray-200/80 border-l-[5px] border-emerald-500">
+                        <div
+                            class="absolute top-8 right-8 hidden sm:block h-24 w-24 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/5">
+                        </div>
+                        <div class="relative space-y-6 text-gray-700 leading-relaxed text-base sm:text-[1.05rem]">
+                            <p class="text-gray-800 font-medium text-lg leading-snug sm:text-xl">
+                                Trabalho com <span
+                                    class="text-emerald-700 font-semibold">Java</span> e <span
+                                    class="text-emerald-700 font-semibold">Node.js</span> no dia a dia e aprofundo <span
+                                    class="text-emerald-700 font-semibold">Rust</span> quando performance e segurança
+                                pedem.
+                            </p>
+                            <p>
+                                Em sistemas reais, a mesma lógica de <strong>upload e armazenamento</strong> voltava a
+                                aparecer projeto após projeto. Tratei isso como decisão de <strong>arquitetura</strong>:
+                                centralizar responsabilidades, padronizar contratos e evoluir sem acoplamento.
+                            </p>
+                            <p>
+                                Daí surgiu um <strong>microserviço em Rust</strong> para arquivos — isolamento por projeto
+                                e autenticação por chave — e hoje priorizo <strong>backend</strong>,
+                                <strong>desenho de serviços</strong> e <strong>código reutilizável</strong> consumível por
+                                outros times.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-2">
+                            <span
+                                class="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800 ring-1 ring-emerald-100">APIs</span>
+                            <span
+                                class="inline-flex items-center rounded-full bg-teal-50 px-3 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-100">Microserviços</span>
+                            <span
+                                class="inline-flex items-center rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-900 ring-1 ring-cyan-100">Arquitetura</span>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="lg:col-span-5 xl:col-span-4 flex flex-col gap-4">
+                    <div
+                        class="group flex gap-4 rounded-2xl bg-white p-5 shadow-lg shadow-gray-200/50 ring-1 ring-gray-100 transition hover:ring-emerald-200/80 hover:shadow-emerald-900/5">
+                        <div
+                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-600/25">
+                            <i class="fas fa-graduation-cap text-lg" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-1">Formação</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                ADS, UNIFUNEC — Santa Fé do Sul. Conclusão prevista: <strong>2026</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex gap-4 rounded-2xl bg-white p-5 shadow-lg shadow-gray-200/50 ring-1 ring-gray-100 transition hover:ring-emerald-200/80 hover:shadow-emerald-900/5">
+                        <div
+                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-slate-700 to-slate-900 text-white shadow-md">
+                            <i class="fas fa-briefcase text-lg" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-1">Atuação</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Desenvolvedor backend júnior na <strong>CodiTech</strong> desde <strong>outubro de
+                                    2024</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex-1 rounded-2xl bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 p-6 text-white shadow-xl shadow-emerald-900/20 ring-1 ring-white/10">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-300/90 mb-4">Stack em foco
+                        </h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center gap-3">
+                                <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10"><i
+                                        class="fab fa-java text-lg" aria-hidden="true"></i></span>
+                                <span>Java</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10"><i
+                                        class="fab fa-node-js text-lg" aria-hidden="true"></i></span>
+                                <span>Node.js</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 font-bold text-xs"
+                                    aria-hidden="true">Rs</span>
+                                <span>Rust</span>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
