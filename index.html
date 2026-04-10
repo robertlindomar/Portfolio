@@ -19,12 +19,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
+                    
                     <a href="#hero" class="text-xl sm:text-2xl font-bold text-emerald-600 py-2">Robert Lindomar</a>
                 </div>
                 <div class="hidden lg:flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm">
                     <a href="#hero" class="nav-link text-gray-700 hover:text-emerald-600 transition">Início</a>
                     <a href="#sobre" class="nav-link text-gray-700 hover:text-emerald-600 transition">Sobre</a>
                     <a href="#destaque" class="nav-link text-gray-700 hover:text-emerald-600 transition">Destaque</a>
+                    <a href="#systagio" class="nav-link text-gray-700 hover:text-emerald-600 transition">Systagio</a>
                     <a href="#projetos" class="nav-link text-gray-700 hover:text-emerald-600 transition">Projetos</a>
                     <a href="#habilidades" class="nav-link text-gray-700 hover:text-emerald-600 transition">Habilidades</a>
                     <a href="#tecnologias" class="nav-link text-gray-700 hover:text-emerald-600 transition">Tecnologias</a>
@@ -52,6 +54,8 @@
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Sobre</a>
                 <a href="#destaque"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Destaque</a>
+                <a href="#systagio"
+                    class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Systagio</a>
                 <a href="#projetos"
                     class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Projetos</a>
                 <a href="#habilidades"
@@ -186,9 +190,7 @@
                             <p class="text-gray-800 font-medium text-lg leading-snug sm:text-xl">
                                 Trabalho com <span
                                     class="text-emerald-700 font-semibold">Java</span> e <span
-                                    class="text-emerald-700 font-semibold">Node.js</span> no dia a dia e aprofundo <span
-                                    class="text-emerald-700 font-semibold">Rust</span> quando performance e segurança
-                                pedem.
+                                    class="text-emerald-700 font-semibold">Node.js</span>
                             </p>
                             <p>
                                 Em sistemas reais, a mesma lógica de <strong>upload e armazenamento</strong> voltava a
@@ -255,12 +257,7 @@
                                 <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10"><i
                                         class="fab fa-node-js text-lg" aria-hidden="true"></i></span>
                                 <span>Node.js</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 font-bold text-xs"
-                                    aria-hidden="true">Rs</span>
-                                <span>Rust</span>
-                            </li>
+                            </li>            
                         </ul>
                     </div>
                 </aside>
@@ -278,8 +275,10 @@
             <article
                 class="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100 lg:flex lg:items-stretch">
                 <div class="lg:w-2/5 bg-gradient-to-br from-emerald-900 to-teal-900 p-10 flex flex-col justify-center items-center text-center">
-                    <div class="w-24 h-24 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
-                        <i class="fas fa-database text-4xl text-emerald-300" aria-hidden="true"></i>
+                    <div
+                        class="mb-6 flex aspect-square w-52 max-w-full items-center justify-center rounded-2xl bg-white/10 p-1.5 sm:w-56 sm:p-2 md:w-64 lg:w-72">
+                        <img src="img/filestorage/icon.png" alt="Ícone File Storage"
+                            class="h-full w-full max-h-full max-w-full object-contain object-center">
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-2">File Storage Service</h3>
                     <p class="text-emerald-100/90 text-sm mb-6">Rust · API REST · armazenamento centralizado</p>
@@ -331,6 +330,185 @@
             </article>
         </div>
     </section>
+
+    <section id="systagio" class="py-20 bg-white px-4 sm:px-6 border-t border-gray-200/80">
+        <div class="max-w-7xl mx-auto">
+            <header class="text-center mb-12 max-w-3xl mx-auto">
+                <p class="text-emerald-600 font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-3">CodiTech ·
+                    produto</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Systagio</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Sistema para <strong>instituições de ensino</strong> e <strong>empresas</strong> centralizarem
+                    estágios, contratos, documentos e acompanhamento de alunos. A página pública apresenta o produto,
+                    planos e contato — o desenvolvimento do sistema por trás dessa apresentação foi minha entrega na
+                    empresa.
+                </p>
+            </header>
+
+            <article
+                class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200 lg:flex lg:items-stretch ring-1 ring-slate-100">
+                <div
+                    class="lg:w-2/5 bg-gradient-to-br from-slate-800 via-slate-900 to-emerald-950 p-6 sm:p-10 flex flex-col justify-center items-center text-center gap-6">
+                    <div id="systagio-carousel" class="relative w-full max-w-md mx-auto" role="region"
+                        aria-labelledby="systagio-carousel-label" aria-roledescription="carrossel"
+                        aria-label="Telas do sistema Systagio">
+                        <p id="systagio-carousel-label" class="sr-only">Imagens da interface do Systagio. Use os botões
+                            para navegar.</p>
+                        <div
+                            class="relative overflow-hidden rounded-2xl border border-white/15 bg-slate-950/50 shadow-lg">
+                            <div data-carousel-track
+                                class="flex transition-transform duration-500 ease-out will-change-transform"
+                                style="transform: translateX(0)">
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/Dashboard.png" alt="Systagio — painel principal"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="eager" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/7-alunos.png" alt="Systagio — gestão de alunos"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/8-empresas.png" alt="Systagio — empresas conveniadas"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/9-estagios.png" alt="Systagio — estágios"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/10-horarios.png" alt="Systagio — horários"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/11-termoContrato.png" alt="Systagio — termo de contrato"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/gerenciar-relatorio.png" alt="Systagio — gerenciar relatórios"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                                <figure data-carousel-slide class="min-w-full w-full m-0">
+                                    <img src="img/systagio/relatorio-1.png" alt="Systagio — relatório"
+                                        class="systagio-carousel-img w-full h-auto max-h-[min(50vh,20rem)] sm:max-h-[24rem] cursor-zoom-in object-contain object-top bg-slate-900/30 transition hover:opacity-95"
+                                        width="1200" height="675" loading="lazy" decoding="async">
+                                </figure>
+                            </div>
+                            <button type="button" data-carousel-prev
+                                class="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-slate-900/70 p-2.5 text-white shadow-md backdrop-blur-sm transition hover:bg-slate-800/90 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                                aria-label="Imagem anterior">
+                                <i class="fas fa-chevron-left text-sm" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" data-carousel-next
+                                class="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-slate-900/70 p-2.5 text-white shadow-md backdrop-blur-sm transition hover:bg-slate-800/90 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                                aria-label="Próxima imagem">
+                                <i class="fas fa-chevron-right text-sm" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div data-carousel-dots class="mt-3 flex min-h-[1.25rem] justify-center gap-2" role="tablist"
+                            aria-label="Selecionar imagem"></div>
+                        <p class="mt-2 text-xs text-emerald-200/70">Interface do sistema — clique na imagem para ampliar
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Gestão de estágios</h3>
+                        <p class="text-emerald-100/90 text-sm mb-6">Next.js · Node.js · TypeScript · VPS</p>
+                        <div class="flex flex-col gap-3 w-full max-w-xs mx-auto">
+                            <a href="https://systagiopro.coditech.dev.br/"
+                                class="text-center px-4 py-3 rounded-lg bg-white text-slate-900 font-medium hover:bg-emerald-50 transition"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Site do produto — saiba
+                                mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-3/5 p-8 lg:p-10 space-y-8">
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">O produto</h4>
+                        <p class="text-gray-700">
+                            O <strong>Systagio</strong> reúne cadastros, contratos, relatórios e notificações para
+                            reduzir processos manuais e dar visibilidade de prazos e status. A
+                            <a href="https://systagiopro.coditech.dev.br/"
+                                class="text-emerald-700 font-medium hover:underline" target="_blank"
+                                rel="noopener noreferrer">landing do produto</a> mostra funcionalidades, comparativo
+                            antes/depois, planos e formulários de demonstração e teste grátis.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Minha atuação
+                        </h4>
+                        <p class="text-gray-700">
+                            Fui responsável pelo <strong>front-end em Next.js com TypeScript</strong> e pelo
+                            <strong>back-end em Node.js com TypeScript</strong> do sistema divulgado nesse site, além da
+                            <strong>configuração da VPS</strong> e do desenho operacional para colocar a solução no ar
+                            com estabilidade — da interface à API e ao ambiente de execução.
+                        </p>
+                        <p class="text-gray-700 mt-4">
+                            Configurei também <strong>backup automatizado do banco de dados</strong>, com política de retenção para manter o armazenamento sob controle sem necessidade de intervenção manual.
+                        </p>
+                 
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Escopo técnico
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Next.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">TypeScript</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Deploy em VPS</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Backup BD · diário ·
+                                90 dias</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Para quem
+                            interessa</h4>
+                        <p class="text-gray-700">
+                            Recrutadores e times técnicos veem aqui um case de <strong>produto real</strong> com entrega
+                            ponta a ponta. Quem quiser detalhes comerciais, telas e planos pode seguir direto para o
+                            site oficial do Systagio.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div id="systagio-lightbox" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4 sm:p-8"
+        role="dialog" aria-modal="true" aria-labelledby="systagio-lightbox-title" aria-hidden="true">
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-md" data-lightbox-backdrop tabindex="-1"></div>
+        <button type="button"
+            class="absolute right-3 top-3 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 sm:right-6 sm:top-6"
+            data-lightbox-close aria-label="Fechar visualização ampliada">
+            <i class="fas fa-times text-lg" aria-hidden="true"></i>
+        </button>
+        <button type="button" data-lightbox-prev
+            class="lightbox-nav absolute left-2 top-1/2 z-20 hidden -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 sm:left-4"
+            aria-label="Imagem anterior">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" data-lightbox-next
+            class="lightbox-nav absolute right-2 top-1/2 z-20 hidden -translate-y-1/2 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 sm:right-4"
+            aria-label="Próxima imagem">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <div
+            class="relative z-10 flex max-h-[min(92vh,900px)] w-full max-w-6xl cursor-default flex-col items-center justify-center rounded-lg p-1">
+            <h2 id="systagio-lightbox-title" class="sr-only">Imagem ampliada do Systagio</h2>
+            <img id="systagio-lightbox-img" src="" alt=""
+                class="max-h-[min(88vh,860px)] w-auto max-w-full cursor-default rounded-lg object-contain shadow-2xl ring-1 ring-white/10">
+            <p class="mt-3 max-w-full cursor-default truncate text-center text-sm text-emerald-100/90"
+                id="systagio-lightbox-caption" hidden></p>
+        </div>
+        <p class="relative z-10 mt-4 text-center text-xs text-white/50">Esc ou clique fora para fechar</p>
+    </div>
 
     <section id="projetos" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
@@ -398,7 +576,7 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col md:col-span-2 lg:col-span-1">
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col">
                     <div class="relative overflow-hidden">
                         <img src="img/digipro/capa.png" alt="Site institucional DigiPro"
                             class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
@@ -418,6 +596,36 @@
                             <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">JavaScript</span>
                         </div>
                         <a href="https://digiproltda.com.br"
+                            class="text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Visitar
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="img/centroempresarial/capa.png"
+                            alt="Landing Centro Empresarial do Interior — Catanduva"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Centro Empresarial do Interior — Catanduva</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Landing institucional para lotes comerciais e industriais:
+                            apresentação do empreendimento, vídeo, destaque para localização junto à SP-351, benefícios
+                            para investidores e CTAs para reserva de interesse e contato (formulário e WhatsApp).</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>O que resolve:</strong> comunicação clara do
+                            projeto e captação de leads qualificados.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">HTML</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Tailwind</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <a href="https://centroempresarial.agenciag3.com.br/"
                             class="text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center"
                             target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-external-link-alt mr-2" aria-hidden="true"></i>Visitar
@@ -642,6 +850,161 @@
                 nav.classList.remove('shadow-lg', 'bg-white/95');
             }
         });
+    </script>
+
+    <script>
+        (function () {
+            const root = document.getElementById('systagio-carousel');
+            const lightbox = document.getElementById('systagio-lightbox');
+            const lightboxImg = document.getElementById('systagio-lightbox-img');
+            const lightboxCaption = document.getElementById('systagio-lightbox-caption');
+            if (!root) return;
+
+            const track = root.querySelector('[data-carousel-track]');
+            const prevBtn = root.querySelector('[data-carousel-prev]');
+            const nextBtn = root.querySelector('[data-carousel-next]');
+            const dotsWrap = root.querySelector('[data-carousel-dots]');
+            const slides = root.querySelectorAll('[data-carousel-slide]');
+            const n = slides.length;
+            let i = 0;
+            let focusBeforeOpen = null;
+
+            const lbPrev = lightbox ? lightbox.querySelector('[data-lightbox-prev]') : null;
+            const lbNext = lightbox ? lightbox.querySelector('[data-lightbox-next]') : null;
+
+            function updateLightboxImage() {
+                if (!lightboxImg || !slides[i]) return;
+                const img = slides[i].querySelector('img');
+                if (!img) return;
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                if (lightboxCaption) {
+                    lightboxCaption.textContent = img.alt || '';
+                    lightboxCaption.hidden = !img.alt;
+                }
+            }
+
+            function apply() {
+                track.style.transform = 'translateX(-' + (i * 100) + '%)';
+                dotsWrap.querySelectorAll('button').forEach(function (dot, idx) {
+                    const on = idx === i;
+                    dot.setAttribute('aria-selected', on ? 'true' : 'false');
+                    dot.classList.toggle('bg-white', on);
+                    dot.classList.toggle('bg-white/40', !on);
+                });
+                if (lightbox && !lightbox.classList.contains('hidden')) {
+                    updateLightboxImage();
+                }
+            }
+
+            function go(delta) {
+                if (n <= 1) return;
+                i = (i + delta + n) % n;
+                apply();
+            }
+
+            function openLightbox() {
+                if (!lightbox) return;
+                focusBeforeOpen = document.activeElement;
+                updateLightboxImage();
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                const closeBtn = lightbox.querySelector('[data-lightbox-close]');
+                if (closeBtn) closeBtn.focus();
+            }
+
+            function closeLightbox() {
+                if (!lightbox || lightbox.classList.contains('hidden')) return;
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                if (focusBeforeOpen && typeof focusBeforeOpen.focus === 'function') {
+                    focusBeforeOpen.focus();
+                }
+            }
+
+            if (n <= 1) {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+                dotsWrap.classList.add('hidden');
+                if (lbPrev) lbPrev.classList.add('hidden');
+                if (lbNext) lbNext.classList.add('hidden');
+            } else {
+                if (lbPrev) lbPrev.classList.remove('hidden');
+                if (lbNext) lbNext.classList.remove('hidden');
+            }
+
+            if (n > 1) {
+                for (let j = 0; j < n; j++) {
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    b.setAttribute('role', 'tab');
+                    b.className = 'h-2 w-2 shrink-0 rounded-full bg-white/40 transition-colors hover:bg-white/70';
+                    b.setAttribute('aria-label', 'Imagem ' + (j + 1) + ' de ' + n);
+                    b.addEventListener('click', function () {
+                        i = j;
+                        apply();
+                    });
+                    dotsWrap.appendChild(b);
+                }
+            }
+
+            prevBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                go(-1);
+            });
+            nextBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                go(1);
+            });
+
+            track.addEventListener('click', function (e) {
+                const t = e.target;
+                if (t.tagName !== 'IMG' || !t.classList.contains('systagio-carousel-img')) return;
+                openLightbox();
+            });
+
+            if (lightbox) {
+                lightbox.querySelectorAll('[data-lightbox-close]').forEach(function (el) {
+                    el.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        closeLightbox();
+                    });
+                });
+                lightbox.addEventListener('click', function (e) {
+                    if (e.target.closest('button')) return;
+                    if (e.target.id === 'systagio-lightbox-img') return;
+                    closeLightbox();
+                });
+                if (lbPrev) {
+                    lbPrev.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        go(-1);
+                    });
+                }
+                if (lbNext) {
+                    lbNext.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        go(1);
+                    });
+                }
+                document.addEventListener('keydown', function (e) {
+                    if (lightbox.classList.contains('hidden')) return;
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        go(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        go(1);
+                    }
+                });
+            }
+
+            apply();
+        })();
     </script>
 </body>
 

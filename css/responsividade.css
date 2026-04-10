@@ -13,8 +13,8 @@
    Ajustes de Scroll e Seções
    ========================================== */
 section {
-    /* Compensa o espaço da navbar fixa */
-    scroll-margin-top: 80px;
+    /* Compensa o espaço da navbar fixa (h-24 md:h-28) */
+    scroll-margin-top: 7rem;
 }
 
 /* ==========================================
