@@ -1,0 +1,7 @@
+/* Ícones SVG inline (substitui Font Awesome) */
+.icon-svg {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
