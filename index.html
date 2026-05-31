@@ -313,33 +313,48 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Projeto em destaque</h2>
             <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Microserviço pensado para eliminar duplicação e padronizar armazenamento entre aplicações.
+                Assistente financeiro pelo WhatsApp — registre gastos em linguagem natural, sem instalar aplicativo.
             </p>
 
             <article
                 class="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100 lg:flex lg:items-stretch">
                 <div
-                    class="lg:w-2/5 bg-gradient-to-br from-emerald-900 to-teal-900 p-10 flex flex-col justify-center items-center text-center">
+                    class="lg:w-2/5 bg-gradient-to-br from-emerald-900 to-teal-900 p-8 sm:p-10 flex flex-col justify-center items-center text-center">
+                    <span
+                        class="mb-4 inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-100 ring-1 ring-white/20">
+                        Beta gratuito
+                    </span>
                     <div
-                        class="mb-6 flex aspect-square w-52 max-w-full items-center justify-center rounded-2xl bg-white/10 p-1.5 sm:w-56 sm:p-2 md:w-64 lg:w-72">
+                        class="mb-5 flex aspect-square w-40 max-w-full items-center justify-center rounded-2xl bg-white/10 p-2 sm:w-48 md:w-52">
                         <picture>
-                            <source srcset="img/filestorage/icon.png" type="image/webp">
-                            <img src="img/filestorage/icon.png" alt="Ícone File Storage"
+                            <source srcset="img/digifin/icon.webp" type="image/webp">
+                            <img src="img/digifin/icon.png" alt="Ícone DigiFin"
                                 class="h-full w-full max-h-full max-w-full object-contain object-center" width="512"
                                 height="512" loading="lazy" decoding="async">
                         </picture>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">File Storage Service</h3>
-                    <p class="text-emerald-100/90 text-sm mb-6">Rust · API REST · armazenamento centralizado</p>
-                    <div class="flex flex-col sm:flex-row gap-3 w-full max-w-xs">
-                        <a href="https://github.com/robertlindomar/file-storage-rust"
-                            class="flex-1 text-center px-4 py-3 rounded-lg bg-white text-emerald-900 font-medium hover:bg-emerald-50 transition"
+                    <h3 class="text-2xl font-bold text-white mb-1">DigiFin</h3>
+                    <p class="text-emerald-100 text-sm mb-6 max-w-[16rem] leading-relaxed">Node.js · TypeScript · WhatsApp · PostgreSQL</p>
+                    <div class="flex w-full max-w-[15rem] flex-col gap-3">
+                        <a href="https://wa.me/556792037331?text=fin%20ajuda"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#1da851] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                             target="_blank" rel="noopener noreferrer">
-                            <svg class="inline-block h-4 w-4 shrink-0 mr-2" fill="currentColor" viewBox="0 0 24 24"
-                                aria-hidden="true">
+                            <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
-                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                            </svg>Código no GitHub
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            Testar no WhatsApp
+                        </a>
+                        <a href="https://digifin.robertlindomar.dev"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-white/40 bg-white/10 px-4 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-white/60 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path
+                                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                <path
+                                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                            </svg>
+                            Ver site
                         </a>
                     </div>
                 </div>
@@ -347,37 +362,40 @@
                     <div>
                         <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Problema</h4>
                         <p class="text-gray-700">
-                            Uploads e regras de armazenamento repetidos em várias aplicações, gerando manutenção
-                            dispersa, inconsistência e dificuldade para evoluir políticas (nomes, pastas, limites) de
-                            forma uniforme.
+                            Apps de finanças são abandonados com facilidade; anotar gastos no dia a dia vira atrito e
+                            despesas pequenas acabam esquecidas.
                         </p>
                     </div>
                     <div>
                         <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Solução</h4>
                         <p class="text-gray-700">
-                            Microserviço dedicado ao <strong>armazenamento de arquivos</strong>, com API explícita para
-                            upload, download e metadados. Os demais sistemas passam a consumir um único serviço — um
-                            <strong>mini S3 interno</strong>, com contrato estável.
+                            Assistente financeiro pelo <strong>WhatsApp</strong>: registre despesas e receitas em
+                            linguagem natural com o prefixo <code class="text-emerald-700 bg-emerald-50 px-1 rounded">fin</code>,
+                            sem instalar app. Resumos de saldo, dia e mês direto na conversa.
                         </p>
                     </div>
                     <div>
                         <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Tecnologias</h4>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Rust</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">HTTP / REST</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Docker</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Persistência em disco
-                                (conforme desenho)</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">TypeScript</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Fastify</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Evolution API</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Groq (opcional)</span>
                         </div>
                     </div>
                     <div>
                         <h4 class="text-sm font-semibold text-emerald-600 uppercase tracking-wide mb-2">Diferenciais
                         </h4>
                         <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Substitui uploads duplicados: uma implementação, vários clientes.</li>
-                            <li><strong>Multi-tenant</strong> por projeto ou cliente, com segregação de dados.</li>
-                            <li><strong>API key por projeto</strong> para autenticação e controle de acesso.</li>
-                            <li>Base única para políticas de armazenamento, nomes e limites.</li>
+                            <li>Linguagem natural — <code class="text-emerald-700 bg-emerald-50 px-1 rounded text-sm">fin gastei 35 lanche</code>.</li>
+                            <li>Categorias automáticas nos lançamentos.</li>
+                            <li>Resumos: <code class="text-emerald-700 bg-emerald-50 px-1 rounded text-sm">fin total</code>,
+                                <code class="text-emerald-700 bg-emerald-50 px-1 rounded text-sm">fin hoje</code>,
+                                <code class="text-emerald-700 bg-emerald-50 px-1 rounded text-sm">fin mes</code>.</li>
+                            <li>Privacidade por telefone — hash nos logs, sem uso comercial.</li>
+                            <li>Beta gratuito disponível para teste.</li>
                         </ul>
                     </div>
                 </div>
@@ -633,6 +651,39 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col">
+                    <div class="relative overflow-hidden bg-gradient-to-br from-emerald-900 to-teal-900 h-48 flex items-center justify-center">
+                        <picture>
+                            <source srcset="img/filestorage/icon.webp" type="image/webp">
+                            <img src="img/filestorage/icon.png" alt="File Storage Service"
+                                class="h-32 w-32 object-contain transform group-hover:scale-110 transition duration-500"
+                                width="512" height="512" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">File Storage Service</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Microserviço de armazenamento centralizado — substitui
+                            uploads duplicados entre aplicações com API REST multi-tenant e autenticação por chave.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>O que resolve:</strong> uma implementação de
+                            arquivos, vários clientes — mini S3 interno com contrato estável.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Rust</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">HTTP / REST</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Docker</span>
+                        </div>
+                        <a href="https://github.com/robertlindomar/file-storage-rust"
+                            class="text-emerald-600 hover:text-emerald-800 font-medium inline-flex items-center"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg class="inline-block h-4 w-4 shrink-0 mr-2" fill="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>Código no GitHub
+                        </a>
+                    </div>
+                </div>
+
                 <div
                     class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group flex flex-col">
                     <div class="relative overflow-hidden">

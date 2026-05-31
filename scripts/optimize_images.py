@@ -90,6 +90,9 @@ def main() -> None:
     # File storage: ícone na UI pequeno
     process_png_pair("img/filestorage/icon.png", 512, 512, webp_q=85)
 
+    # DigiFin: ícone na seção destaque
+    process_png_pair("img/digifin/icon.png", 512, 512, webp_q=85)
+
     # Systagio carrossel: largura ~448–600px -> 1200 largura máx para retina
     systagio = IMG / "systagio"
     for name in [
