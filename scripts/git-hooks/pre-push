@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+echo "→ Build automático antes do push..."
+npm run build
+
+git add index.html v1/index.html v1/css v1/js css js
+
+if ! git diff --cached --quiet; then
+  echo "→ Commitando arquivos gerados pelo build..."
+  git commit -m "chore: build automático antes do push" --no-verify
+fi
+
+echo "→ Build ok. Continuando push..."

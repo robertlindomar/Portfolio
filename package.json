@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "prepare": "node scripts/install-git-hooks.mjs",
     "build:v1:css": "tailwindcss -i ./versions/v1/assets/css/tailwind-input.css -o ./versions/v1/assets/css/tailwind-built.css -c ./versions/v1/tailwind.config.js --minify",
     "watch:css": "tailwindcss -i ./versions/v1/assets/css/tailwind-input.css -o ./versions/v1/assets/css/tailwind-built.css -c ./versions/v1/tailwind.config.js --watch",
     "optimize:images": "python3 scripts/optimize_images.py"

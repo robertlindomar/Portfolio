@@ -26,41 +26,25 @@ Isso regenera `index.html` (v2) e `v1/index.html` com os mesmos dados.
 
 Depois: `npm run build`
 
-## Publicar na VPS (Coolify)
+## Subir para o GitHub
 
-Deploy **não** usa GitHub Pages nem Vercel. O fluxo é:
-
-1. Push no GitHub (`main`)
-2. Webhook do Coolify dispara o deploy
-3. Coolify builda com Docker (`Dockerfile` na raiz)
-
-### Configuração no Coolify
-
-| Campo | Valor |
-|-------|--------|
-| Repositório | `git@github.com:robertlindomar/Portfolio.git` |
-| Branch | `main` |
-| Build pack | **Dockerfile** |
-| Porta do container | `80` |
-| Domínio | o seu (ex.: `robertlindomar.dev`) |
-
-O `Dockerfile` roda `npm run build` e serve com **nginx** (`deploy/nginx.conf`), incluindo `/v1/`.
-
-### Webhook
-
-No Coolify: ative **Automatic Deployment** no recurso e copie a URL do webhook.  
-No GitHub: **Settings → Webhooks → Add webhook** → cole a URL do Coolify (evento: `push` na branch `main`).
-
-### Deploy manual (sem webhook)
+O **build roda automaticamente** antes de cada `git push` (hook `pre-push`).
 
 ```bash
-npm run build
 git add .
 git commit -m "sua mensagem"
 git push origin main
 ```
 
-O Coolify só precisa receber o push — não configure GitHub Pages no repositório.
+Se o build gerar arquivos novos (`index.html`, `v1/`, `css/`, `js/`), o hook cria um commit `chore: build automático antes do push` e em seguida faz o push.
+
+Para instalar o hook (após clonar ou na primeira vez):
+
+```bash
+npm install
+```
+
+O script `prepare` copia o hook para `.git/hooks/pre-push`.
 
 ## Estrutura
 
