@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install && npm run build:css",
+  "buildCommand": "npm install && npm run build",
   "outputDirectory": ".",
   "headers": [
     {
@@ -16,6 +16,12 @@
     },
     {
       "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/v1/css/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
       ]

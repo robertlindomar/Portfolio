@@ -1,13 +1,16 @@
 {
   "name": "portfolio",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind-built.css --minify",
-    "watch:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind-built.css --watch",
+    "build": "node scripts/build.mjs",
+    "build:v1:css": "tailwindcss -i ./versions/v1/assets/css/tailwind-input.css -o ./versions/v1/assets/css/tailwind-built.css -c ./versions/v1/tailwind.config.js --minify",
+    "watch:css": "tailwindcss -i ./versions/v1/assets/css/tailwind-input.css -o ./versions/v1/assets/css/tailwind-built.css -c ./versions/v1/tailwind.config.js --watch",
     "optimize:images": "python3 scripts/optimize_images.py"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "handlebars": "^4.7.8",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   }

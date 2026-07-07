@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{{meta.title}}</title>
+<meta name="description" content="{{meta.description}}">
+<meta name="color-scheme" content="dark light">
+<link rel="preload" href="/{{person.photo}}" as="image" fetchpriority="high">
+<link rel="stylesheet" href="css/portfolio.css">
+<script>
+(function () {
+  var saved = localStorage.getItem('portfolio-theme');
+  if (saved === 'light' || saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', saved);
+  }
+})();
+</script>
+</head>
+<body class="p-shell">
+
+<aside class="p-rail" aria-label="Navegação principal">
+    <a href="#hero" class="p-rail__mark">{{person.name}}<span>{{person.tagline}}</span></a>
+    <nav class="p-rail__nav" aria-label="Seções">
+        {{#each nav}}
+        <a href="#{{id}}" class="p-rail__link" data-section="{{id}}" data-index="{{index}}">{{label}}</a>
+        {{/each}}
+    </nav>
+    <div class="p-rail__social">
+        <a href="{{{urls.whatsapp}}}" class="p-rail__wa" target="_blank" rel="noopener noreferrer">WhatsApp →</a>
+        <a href="{{contact.github.url}}" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        <a href="{{contact.linkedin.url}}" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+    </div>
+    <button type="button" class="p-theme-toggle" data-theme-toggle aria-label="Alternar tema claro e escuro">
+        <span class="p-theme-toggle__icon" aria-hidden="true">☀</span>
+        <span class="p-theme-toggle__label">Tema claro</span>
+    </button>
+</aside>
+
+<div class="p-mobile-bar">
+    <a href="#hero" class="p-mobile-bar__brand">{{person.name}}</a>
+    <div class="p-mobile-bar__actions">
+        <button type="button" class="p-theme-toggle p-theme-toggle--compact" data-theme-toggle aria-label="Alternar tema claro e escuro">
+            <span class="p-theme-toggle__icon" aria-hidden="true">☀</span>
+        </button>
+        <button type="button" id="p-menu-btn" class="p-menu-btn" aria-expanded="false" aria-controls="p-mobile-nav">Menu</button>
+    </div>
+</div>
+<nav id="p-mobile-nav" class="p-mobile-nav" aria-label="Menu mobile">
+    <a href="{{{urls.whatsapp}}}" class="p-mobile-nav__wa" target="_blank" rel="noopener noreferrer">{{contactSection.mobileWa}}</a>
+    {{#each nav}}
+    <a href="#{{id}}">{{label}}</a>
+    {{/each}}
+</nav>
+
+<main class="p-main">
+
+    <section id="hero" class="p-hero">
+        <div class="p-hero__copy">
+            <p class="p-hero__meta">{{hero.eyebrow}}</p>
+            <h1>{{{hero.headline}}}</h1>
+            <p class="p-hero__lead">{{hero.lead}}</p>
+            <div class="p-hero__actions">
+                <a href="{{{urls.whatsapp}}}" class="p-btn p-btn--wa" target="_blank" rel="noopener noreferrer">{{hero.ctaPrimary}}</a>
+                <a href="{{hero.ctaSecondaryHref}}" class="p-btn p-btn--ghost">{{hero.ctaSecondary}}</a>
+            </div>
+        </div>
+        <div class="p-hero__visual">
+            <span class="p-hero__index" aria-hidden="true">01</span>
+            <img src="/{{person.photo}}" alt="{{person.photoAlt}}" width="352" height="440" loading="eager" decoding="async" fetchpriority="high">
+        </div>
+    </section>
+
+    <section id="sobre" class="p-section">
+        <header class="p-section__head">
+            <span class="p-section__label">{{about.label}}</span>
+            <h2>{{about.title}}</h2>
+            <p class="p-section__sub">{{about.subtitle}}</p>
+        </header>
+        <div class="p-wrap">
+            <div class="p-about">
+                <article class="p-about__main">
+                    <p class="lead">{{{about.lead}}}</p>
+                    {{#each about.paragraphs}}
+                    <p>{{{this}}}</p>
+                    {{/each}}
+                    <div class="p-tags">
+                        {{#each about.tags}}
+                        <span class="p-tag">{{this}}</span>
+                        {{/each}}
+                    </div>
+                </article>
+                <aside class="p-about__side">
+                    {{#each about.stats}}
+                    <div class="p-stat">
+                        <h3>{{title}}</h3>
+                        {{#if html}}<p>{{{html}}}</p>{{/if}}
+                        {{#if items}}
+                        <ul class="p-stack-list">
+                            {{#each items}}<li>{{this}}</li>{{/each}}
+                        </ul>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section id="destaque" class="p-section p-section--alt">
+        <header class="p-section__head">
+            <span class="p-section__label">{{featured.label}}</span>
+            <h2>{{featured.title}}</h2>
+            <p class="p-section__sub">{{featured.subtitle}}</p>
+        </header>
+        <div class="p-wrap">
+            <article class="p-feature">
+                <div class="p-feature__media">
+                    <span class="p-badge-warn">{{featured.digifin.status}}</span>
+                    <picture>
+                        <source srcset="/{{featured.digifin.iconWebp}}" type="image/webp">
+                        <img src="/{{featured.digifin.iconPng}}" alt="{{featured.digifin.iconAlt}}" class="p-feature__icon" width="512" height="512" loading="lazy" decoding="async">
+                    </picture>
+                    <h3>{{featured.digifin.name}}</h3>
+                    <p>{{featured.digifin.stack}}</p>
+                    <a href="{{featured.digifin.siteUrl}}" class="p-btn p-btn--ghost" target="_blank" rel="noopener noreferrer">Ver site →</a>
+                </div>
+                <div class="p-feature__body">
+                    <div>
+                        <h4>Problema</h4>
+                        <p>{{featured.digifin.problem}}</p>
+                    </div>
+                    <div>
+                        <h4>Solução</h4>
+                        <p>{{{featured.digifin.solution}}}</p>
+                    </div>
+                    <div>
+                        <h4>Tecnologias</h4>
+                        <div class="p-tags">
+                            {{#each featured.digifin.tags}}
+                            <span class="p-tag">{{this}}</span>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Diferenciais</h4>
+                        <ul>
+                            {{#each featured.digifin.highlights}}
+                            <li>{{{this}}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="systagio" class="p-section">
+        <header class="p-section__head">
+            <span class="p-section__label">{{systagio.label}}</span>
+            <h2>{{systagio.title}}</h2>
+            <p class="p-section__sub">{{{systagio.subtitle}}}</p>
+        </header>
+        <div class="p-wrap">
+            <article class="p-feature p-feature--flip">
+                <div class="p-feature__media">
+                    <div id="systagio-carousel" class="p-carousel" role="region" aria-labelledby="systagio-carousel-label" aria-roledescription="carrossel" aria-label="Telas do sistema Systagio">
+                        <p id="systagio-carousel-label" class="sr-only">Imagens da interface do Systagio. Use os botões para navegar.</p>
+                        <div class="p-carousel__viewport">
+                            <div data-carousel-track class="p-carousel__track">
+                                {{#each systagio.slides}}
+                                <figure data-carousel-slide class="p-carousel__slide">
+                                    <picture>
+                                        <source srcset="/{{webp}}" type="image/webp">
+                                        <img src="/{{png}}" alt="{{alt}}" class="systagio-carousel-img" width="1200" height="675" loading="{{#if eager}}eager{{else}}lazy{{/if}}" decoding="async"{{#if eager}} fetchpriority="high"{{/if}}>
+                                    </picture>
+                                </figure>
+                                {{/each}}
+                            </div>
+                            <button type="button" data-carousel-prev class="p-carousel__btn p-carousel__btn--prev" aria-label="Imagem anterior">‹</button>
+                            <button type="button" data-carousel-next class="p-carousel__btn p-carousel__btn--next" aria-label="Próxima imagem">›</button>
+                        </div>
+                        <div data-carousel-dots class="p-carousel__dots" role="tablist" aria-label="Selecionar imagem"></div>
+                        <p class="mono" style="font-size:0.7rem;color:var(--muted);margin-top:0.5rem;">{{systagio.carouselHint}}</p>
+                    </div>
+                    <h3>{{systagio.productName}}</h3>
+                    <p>{{systagio.stack}}</p>
+                    <a href="{{systagio.siteUrl}}" class="p-btn p-btn--primary" target="_blank" rel="noopener noreferrer">{{systagio.siteCta}}</a>
+                </div>
+                <div class="p-feature__body">
+                    {{#each systagio.sections}}
+                    <div>
+                        <h4>{{title}}</h4>
+                        {{#if html}}<p>{{{html}}}</p>{{/if}}
+                        {{#if paragraphs}}
+                        {{#each paragraphs}}<p>{{{this}}}</p>{{/each}}
+                        {{/if}}
+                        {{#if tags}}
+                        <div class="p-tags">
+                            {{#each tags}}<span class="p-tag">{{this}}</span>{{/each}}
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="projetos" class="p-section p-section--alt">
+        <header class="p-section__head">
+            <span class="p-section__label">{{projects.label}}</span>
+            <h2>{{projects.title}}</h2>
+            <p class="p-section__sub">{{projects.subtitle}}</p>
+        </header>
+        <div class="p-wrap">
+            <div class="p-projects">
+                {{#each projects.items}}
+                <article{{#if id}} id="{{id}}"{{/if}} class="p-project">
+                    <picture>
+                        <source srcset="/{{thumbWebp}}" type="image/webp">
+                        <img src="/{{thumbPng}}" alt="{{thumbAlt}}" class="p-project__thumb{{#if thumbIcon}} p-project__thumb--icon{{/if}}" width="512" height="512" loading="lazy" decoding="async">
+                    </picture>
+                    <div>
+                        <h3>{{title}}</h3>
+                        <p>{{description}}</p>
+                        <p><strong>O que resolve:</strong> {{resolve}}</p>
+                        <div class="p-tags">
+                            {{#each tags}}<span class="p-tag">{{this}}</span>{{/each}}
+                        </div>
+                    </div>
+                    <a href="{{linkUrl}}" class="p-project__link" target="_blank" rel="noopener noreferrer">{{linkLabel}}</a>
+                </article>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="p-section">
+        <header class="p-section__head">
+            <span class="p-section__label">{{stack.label}}</span>
+            <h2>{{{stack.title}}}</h2>
+            <p class="p-section__sub">{{stack.subtitle}}</p>
+        </header>
+        <div class="p-wrap">
+            <div class="p-skills">
+                {{#each stack.skills}}
+                <div class="p-skill">
+                    <h3>{{title}}</h3>
+                    <p>{{description}}</p>
+                </div>
+                {{/each}}
+            </div>
+            <h3 style="font-size:1.25rem;font-weight:800;margin:0 0 1.5rem;text-align:center;">Ferramentas</h3>
+            <div class="p-tools">
+                {{#each stack.tools}}
+                <div class="p-tool">
+                    <h3>{{title}}</h3>
+                    <ul>
+                        {{#each items}}<li>{{this}}</li>{{/each}}
+                    </ul>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="p-section p-section--alt">
+        <header class="p-section__head">
+            <span class="p-section__label">{{contactSection.label}}</span>
+            <h2>{{contactSection.title}}</h2>
+            <p class="p-section__sub">{{contactSection.subtitle}}</p>
+        </header>
+        <div class="p-wrap">
+            <div class="p-contact__hero">
+                <div class="p-contact__hero-copy">
+                    <span class="p-contact__hero-label">{{contactSection.heroLabel}}</span>
+                    <h3>{{contactSection.heroTitle}}</h3>
+                    <p>{{contactSection.heroText}}</p>
+                </div>
+                <a href="{{{urls.whatsapp}}}" class="p-btn p-btn--wa p-btn--wa-lg" target="_blank" rel="noopener noreferrer">{{contactSection.heroCta}}</a>
+            </div>
+            <p class="p-contact__alt">{{contactSection.altChannels}}</p>
+            <div class="p-contact">
+                <a href="{{{urls.whatsapp}}}" class="p-contact__item p-contact__item--primary" target="_blank" rel="noopener noreferrer">
+                    <span class="p-contact__num">01</span>
+                    <div class="p-contact__body">
+                        <span class="p-contact__label">WhatsApp</span>
+                        <span class="p-contact__value">{{contact.whatsapp.display}}</span>
+                    </div>
+                    <span class="p-contact__go" aria-hidden="true">→</span>
+                </a>
+                <a href="mailto:{{contact.email}}" class="p-contact__item">
+                    <span class="p-contact__num">02</span>
+                    <div class="p-contact__body">
+                        <span class="p-contact__label">E-mail</span>
+                        <span class="p-contact__value">{{contact.email}}</span>
+                    </div>
+                    <span class="p-contact__go" aria-hidden="true">→</span>
+                </a>
+                <a href="{{contact.github.url}}" class="p-contact__item" target="_blank" rel="noopener noreferrer">
+                    <span class="p-contact__num">03</span>
+                    <div class="p-contact__body">
+                        <span class="p-contact__label">GitHub</span>
+                        <span class="p-contact__value">{{contact.github.display}}</span>
+                    </div>
+                    <span class="p-contact__go" aria-hidden="true">→</span>
+                </a>
+                <a href="{{contact.linkedin.url}}" class="p-contact__item" target="_blank" rel="noopener noreferrer">
+                    <span class="p-contact__num">04</span>
+                    <div class="p-contact__body">
+                        <span class="p-contact__label">LinkedIn</span>
+                        <span class="p-contact__value">{{contact.linkedin.display}}</span>
+                    </div>
+                    <span class="p-contact__go" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-footer">
+        <p>© <span data-year></span> {{person.name}}. Todos os direitos reservados.</p>
+        <p class="p-footer__version"><a href="{{versions.v1.url}}">{{versions.v1.label}}</a></p>
+    </footer>
+
+</main>
+
+<a href="{{{urls.whatsapp}}}" class="p-wa-float" target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento no WhatsApp">
+    <span aria-hidden="true">{{contactSection.floatLabel}}</span>
+</a>
+
+<div id="systagio-lightbox" class="p-lightbox" role="dialog" aria-modal="true" aria-labelledby="systagio-lightbox-title" aria-hidden="true">
+    <div class="p-lightbox__backdrop" data-lightbox-close tabindex="-1"></div>
+    <button type="button" class="p-lightbox__close" data-lightbox-close aria-label="Fechar visualização ampliada">×</button>
+    <button type="button" class="p-lightbox__nav p-lightbox__nav--prev" data-lightbox-prev aria-label="Imagem anterior">‹</button>
+    <button type="button" class="p-lightbox__nav p-lightbox__nav--next" data-lightbox-next aria-label="Próxima imagem">›</button>
+    <h2 id="systagio-lightbox-title" class="sr-only">Imagem ampliada do Systagio</h2>
+    <img id="systagio-lightbox-img" class="p-lightbox__img" alt="" hidden>
+    <p id="systagio-lightbox-caption" class="p-lightbox__hint" hidden></p>
+    <p class="p-lightbox__hint">Esc ou clique fora para fechar</p>
+</div>
+
+<script src="js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "title": "Robert Lindomar — Sistemas sob medida | WhatsApp",
+    "description": "Desenvolvedor de sistemas para empresas. Sites, APIs e software sob medida. Orçamento rápido pelo WhatsApp."
+  },
+  "person": {
+    "name": "Robert Lindomar",
+    "tagline": "desenvolvedor de sistemas",
+    "photo": "img/eugpt.png",
+    "photoAlt": "Robert Lindomar"
+  },
+  "contact": {
+    "whatsapp": {
+      "phone": "5567998911380",
+      "display": "+55 67 99891-1380",
+      "message": "Olá Robert! Vi seu portfólio e gostaria de um orçamento."
+    },
+    "email": "robertlindomar18@gmail.com",
+    "github": {
+      "url": "https://github.com/robertlindomar",
+      "display": "github.com/robertlindomar"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/robert-lindomar-672312321/",
+      "display": "/in/robert-lindomar"
+    }
+  },
+  "versions": {
+    "current": "v2",
+    "v1": {
+      "label": "Ver versão 1 (arquivo)",
+      "url": "/v1/"
+    },
+    "v2": {
+      "label": "Ver versão 2 (atual)",
+      "url": "/"
+    }
+  },
+  "nav": [
+    { "id": "hero", "index": "01", "label": "Início" },
+    { "id": "sobre", "index": "02", "label": "Sobre" },
+    { "id": "destaque", "index": "03", "label": "Destaque" },
+    { "id": "systagio", "index": "04", "label": "Systagio" },
+    { "id": "projetos", "index": "05", "label": "Projetos" },
+    { "id": "stack", "index": "06", "label": "Stack" },
+    { "id": "contato", "index": "07", "label": "Contato" }
+  ],
+  "hero": {
+    "eyebrow": "Sites · sistemas · APIs · Orçamento pelo WhatsApp",
+    "headline": "Seu sistema <span>no ar</span>, do jeito que o negócio precisa",
+    "lead": "Ajudo empresas a lançar sites, sistemas internos e integrações com prazo claro e comunicação direta — do primeiro contato ao projeto em produção, com suporte após a entrega.",
+    "ctaPrimary": "Pedir orçamento no WhatsApp",
+    "ctaSecondary": "Ver projetos →",
+    "ctaSecondaryHref": "#projetos"
+  },
+  "about": {
+    "label": "02 — Sobre",
+    "title": "Sobre mim",
+    "subtitle": "Parceiro técnico para quem precisa de sistema funcionando — prazo claro, entrega no ar e suporte depois do lançamento.",
+    "lead": "Entrego <strong>sistemas que geram resultado</strong> — não só código.",
+    "paragraphs": [
+      "Em sistemas reais, a mesma lógica de <strong>upload e armazenamento</strong> voltava a aparecer projeto após projeto. Tratei isso como decisão de <strong>arquitetura</strong>: centralizar responsabilidades, padronizar contratos e evoluir sem acoplamento.",
+      "Daí surgiu um <strong>microserviço em Rust</strong> para arquivos — isolamento por projeto e autenticação por chave — e hoje atuo como <strong>desenvolvedor de sistemas</strong>, unindo APIs, integrações e entregas web conforme o que cada projeto pede."
+    ],
+    "tags": ["APIs", "Microserviços", "Arquitetura"],
+    "stats": [
+      {
+        "title": "Formação",
+        "html": "ADS, UNIFUNEC — Santa Fé do Sul. Conclusão prevista: <strong>2026</strong>."
+      },
+      {
+        "title": "Atuação",
+        "html": "Desenvolvedor de sistemas na <strong>CodiTech</strong> desde <strong>outubro de 2024</strong>. Também atendo <strong>projetos freelance</strong>."
+      },
+      {
+        "title": "Stack em foco",
+        "items": ["Java", "Node.js"]
+      }
+    ]
+  },
+  "featured": {
+    "label": "03 — Destaque",
+    "title": "Projeto em destaque",
+    "subtitle": "Assistente financeiro pelo WhatsApp — registre gastos em linguagem natural, sem instalar aplicativo.",
+    "digifin": {
+      "name": "DigiFin",
+      "status": "Em manutenção",
+      "stack": "Node.js · TypeScript · WhatsApp · PostgreSQL",
+      "siteUrl": "https://digifin.robertlindomar.dev",
+      "iconWebp": "img/digifin/icon.webp",
+      "iconPng": "img/digifin/icon.png",
+      "iconAlt": "Ícone DigiFin",
+      "problem": "Apps de finanças são abandonados com facilidade; anotar gastos no dia a dia vira atrito e despesas pequenas acabam esquecidas.",
+      "solution": "Assistente financeiro pelo <strong>WhatsApp</strong>: registre despesas e receitas em linguagem natural com o prefixo <code>fin</code>, sem instalar app. Resumos de saldo, dia e mês direto na conversa.",
+      "tags": ["Node.js", "TypeScript", "Fastify", "PostgreSQL", "Evolution API", "Groq (opcional)"],
+      "highlights": [
+        "Linguagem natural — <code>fin gastei 35 lanche</code>.",
+        "Categorias automáticas nos lançamentos.",
+        "Resumos: <code>fin total</code>, <code>fin hoje</code>, <code>fin mes</code>.",
+        "Privacidade por telefone — hash nos logs, sem uso comercial.",
+        "Beta gratuito — testes no WhatsApp pausados por manutenção."
+      ]
+    }
+  },
+  "systagio": {
+    "label": "04 — Case",
+    "title": "Systagio",
+    "subtitle": "Sistema para <strong>instituições de ensino</strong> e <strong>empresas</strong> centralizarem estágios, contratos, documentos e acompanhamento de alunos. A página pública apresenta o produto, planos e contato — o desenvolvimento do sistema por trás dessa apresentação foi minha entrega na empresa.",
+    "productName": "Gestão de estágios",
+    "stack": "Next.js · Node.js · TypeScript · VPS",
+    "siteUrl": "https://systagiopro.coditech.dev.br/",
+    "siteCta": "Site do produto — saiba mais",
+    "carouselHint": "Interface do sistema — clique na imagem para ampliar",
+    "slides": [
+      { "webp": "img/systagio/Dashboard.webp", "png": "img/systagio/Dashboard.png", "alt": "Systagio — painel principal", "eager": true },
+      { "webp": "img/systagio/7-alunos.webp", "png": "img/systagio/7-alunos.png", "alt": "Systagio — gestão de alunos" },
+      { "webp": "img/systagio/8-empresas.webp", "png": "img/systagio/8-empresas.png", "alt": "Systagio — empresas conveniadas" },
+      { "webp": "img/systagio/9-estagios.webp", "png": "img/systagio/9-estagios.png", "alt": "Systagio — estágios" },
+      { "webp": "img/systagio/10-horarios.webp", "png": "img/systagio/10-horarios.png", "alt": "Systagio — horários" },
+      { "webp": "img/systagio/11-termoContrato.webp", "png": "img/systagio/11-termoContrato.png", "alt": "Systagio — termo de contrato" },
+      { "webp": "img/systagio/gerenciar-relatorio.webp", "png": "img/systagio/gerenciar-relatorio.png", "alt": "Systagio — gerenciar relatórios" },
+      { "webp": "img/systagio/relatorio-1.webp", "png": "img/systagio/relatorio-1.png", "alt": "Systagio — relatório" }
+    ],
+    "sections": [
+      {
+        "title": "O produto",
+        "html": "O <strong>Systagio</strong> reúne cadastros, contratos, relatórios e notificações para reduzir processos manuais e dar visibilidade de prazos e status. A <a href=\"https://systagiopro.coditech.dev.br/\" target=\"_blank\" rel=\"noopener noreferrer\">landing do produto</a> mostra funcionalidades, comparativo antes/depois, planos e formulários de demonstração e teste grátis."
+      },
+      {
+        "title": "Minha atuação",
+        "paragraphs": [
+          "Fui responsável pelo <strong>front-end em Next.js com TypeScript</strong> e pelo <strong>back-end em Node.js com TypeScript</strong> do sistema divulgado nesse site, além da <strong>configuração da VPS</strong> e do desenho operacional para colocar a solução no ar com estabilidade — da interface à API e ao ambiente de execução.",
+          "Configurei também <strong>backup automatizado do banco de dados</strong>, com política de retenção para manter o armazenamento sob controle sem necessidade de intervenção manual."
+        ]
+      },
+      {
+        "title": "Escopo técnico",
+        "tags": ["Next.js", "TypeScript", "Node.js", "Deploy em VPS", "Backup BD · diário · 90 dias"]
+      },
+      {
+        "title": "Para quem interessa",
+        "html": "Recrutadores, empresas e times técnicos veem aqui um case de <strong>produto real</strong> com entrega ponta a ponta. Quem quiser detalhes comerciais, telas e planos pode seguir direto para o site oficial do Systagio."
+      }
+    ]
+  },
+  "projects": {
+    "label": "05 — Projetos",
+    "title": "Outros projetos",
+    "subtitle": "Cases reais: cada projeto mostra como transformo necessidade de negócio em sistema publicado e pronto para usar.",
+    "items": [
+      {
+        "id": "file-storage",
+        "title": "File Storage Service",
+        "description": "Microserviço de armazenamento centralizado — substitui uploads duplicados entre aplicações com API REST multi-tenant e autenticação por chave.",
+        "resolve": "uma implementação de arquivos, vários clientes — mini S3 interno com contrato estável.",
+        "thumbWebp": "img/filestorage/icon.webp",
+        "thumbPng": "img/filestorage/icon.png",
+        "thumbAlt": "File Storage Service",
+        "thumbIcon": true,
+        "tags": ["Rust", "HTTP / REST", "Docker"],
+        "linkUrl": "https://github.com/robertlindomar/file-storage-rust",
+        "linkLabel": "Código no GitHub →"
+      },
+      {
+        "title": "Cardápio digital — Espaço Carioca",
+        "description": "Canal digital de cardápio e pedido pelo celular: cliente consulta itens sem cardápio físico e o estabelecimento atualiza ofertas com menos atrito operacional.",
+        "resolve": "experiência simples no salão e comunicação visual dos pratos.",
+        "thumbWebp": "img/espacocarioca/capa.webp",
+        "thumbPng": "img/espacocarioca/capa.png",
+        "thumbAlt": "Cardápio digital Espaço Carioca",
+        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "linkUrl": "https://espacocarioca.digiproltda.com.br",
+        "linkLabel": "Visitar →"
+      },
+      {
+        "title": "Arte na Pele — estúdio de tatuagem",
+        "description": "Site para exibir portfólio, estilos e facilitar contato e agendamento, com layout direto ao ponto para conversão.",
+        "resolve": "vitrine profissional e captação de leads qualificados.",
+        "thumbWebp": "img/guto/capa.webp",
+        "thumbPng": "img/guto/capa.png",
+        "thumbAlt": "Site estúdio Arte na Pele",
+        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "linkUrl": "http://gutotattoo.robertlindomar.tech",
+        "linkLabel": "Demo →"
+      },
+      {
+        "title": "DigiPro — marketing digital",
+        "description": "Site institucional com serviços, prova social e pontos de contato para captação de leads em marketing e tráfego pago.",
+        "resolve": "presença digital alinhada à oferta comercial da agência.",
+        "thumbWebp": "img/digipro/capa.webp",
+        "thumbPng": "img/digipro/capa.png",
+        "thumbAlt": "Site institucional DigiPro",
+        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "linkUrl": "https://digiproltda.com.br",
+        "linkLabel": "Visitar →"
+      },
+      {
+        "title": "Centro Empresarial do Interior — Catanduva",
+        "description": "Landing institucional para lotes comerciais e industriais: apresentação do empreendimento, vídeo, destaque para localização junto à SP-351, benefícios para investidores e CTAs para reserva de interesse e contato (formulário e WhatsApp).",
+        "resolve": "comunicação clara do projeto e captação de leads qualificados.",
+        "thumbWebp": "img/centroempresarial/capa.webp",
+        "thumbPng": "img/centroempresarial/capa.png",
+        "thumbAlt": "Landing Centro Empresarial do Interior — Catanduva",
+        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "linkUrl": "https://centroempresarial.agenciag3.com.br/",
+        "linkLabel": "Visitar →"
+      }
+    ]
+  },
+  "stack": {
+    "label": "06 — Stack",
+    "title": "Stack & engenharia",
+    "subtitle": "Capacidades e ferramentas que uso em sistemas, APIs, dados e infraestrutura.",
+    "skills": [
+      { "title": "APIs REST", "description": "Contratos claros, recursos bem definidos e versionamento pragmático." },
+      { "title": "Arquitetura em camadas", "description": "Separação entre domínio, integração e infraestrutura quando o contexto exige." },
+      { "title": "Microserviços", "description": "Serviços com fronteiras claras, integração por API e isolamento de responsabilidades." },
+      { "title": "Integração entre sistemas", "description": "Consumo e exposição de APIs, autenticação por chave e contratos estáveis." },
+      { "title": "Bancos relacionais", "description": "Modelagem e consultas em cenários de aplicação reais." },
+      { "title": "Deploy e infraestrutura", "description": "Containerização com Docker e operação em VPS quando o projeto demanda." }
+    ],
+    "tools": [
+      { "title": "Linguagens", "items": ["Java", "Node.js", "Rust"] },
+      { "title": "Banco de dados", "items": ["PostgreSQL", "MySQL"] },
+      { "title": "Infraestrutura", "items": ["Docker", "VPS"] }
+    ]
+  },
+  "contactSection": {
+    "label": "07 — Contato",
+    "title": "Vamos começar seu projeto?",
+    "subtitle": "O caminho mais rápido é o WhatsApp: você me conta a ideia e eu retorno com próximos passos e orçamento.",
+    "heroLabel": "Canal principal",
+    "heroTitle": "Chame no WhatsApp",
+    "heroText": "Resposta ágil para orçamento, prazos e dúvidas sobre o seu projeto.",
+    "heroCta": "Abrir conversa no WhatsApp",
+    "altChannels": "Outros canais",
+    "mobileWa": "WhatsApp — Pedir orçamento",
+    "floatLabel": "WhatsApp"
+  }
+}
