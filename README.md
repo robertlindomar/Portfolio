@@ -26,7 +26,32 @@ Isso regenera `index.html` (v2) e `v1/index.html` com os mesmos dados.
 
 Depois: `npm run build`
 
-## Publicar no GitHub / Vercel
+## Publicar na VPS (Coolify)
+
+Deploy **não** usa GitHub Pages nem Vercel. O fluxo é:
+
+1. Push no GitHub (`main`)
+2. Webhook do Coolify dispara o deploy
+3. Coolify builda com Docker (`Dockerfile` na raiz)
+
+### Configuração no Coolify
+
+| Campo | Valor |
+|-------|--------|
+| Repositório | `git@github.com:robertlindomar/Portfolio.git` |
+| Branch | `main` |
+| Build pack | **Dockerfile** |
+| Porta do container | `80` |
+| Domínio | o seu (ex.: `robertlindomar.dev`) |
+
+O `Dockerfile` roda `npm run build` e serve com **nginx** (`deploy/nginx.conf`), incluindo `/v1/`.
+
+### Webhook
+
+No Coolify: ative **Automatic Deployment** no recurso e copie a URL do webhook.  
+No GitHub: **Settings → Webhooks → Add webhook** → cole a URL do Coolify (evento: `push` na branch `main`).
+
+### Deploy manual (sem webhook)
 
 ```bash
 npm run build
@@ -35,7 +60,7 @@ git commit -m "sua mensagem"
 git push origin main
 ```
 
-A Vercel executa `npm run build` automaticamente no deploy.
+O Coolify só precisa receber o push — não configure GitHub Pages no repositório.
 
 ## Estrutura
 

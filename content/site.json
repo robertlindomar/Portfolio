@@ -48,13 +48,41 @@
     }
   },
   "nav": [
-    { "id": "hero", "index": "01", "label": "Início" },
-    { "id": "sobre", "index": "02", "label": "Sobre" },
-    { "id": "destaque", "index": "03", "label": "Destaque" },
-    { "id": "systagio", "index": "04", "label": "Systagio" },
-    { "id": "projetos", "index": "05", "label": "Projetos" },
-    { "id": "stack", "index": "06", "label": "Stack" },
-    { "id": "contato", "index": "07", "label": "Contato" }
+    {
+      "id": "hero",
+      "index": "01",
+      "label": "Início"
+    },
+    {
+      "id": "sobre",
+      "index": "02",
+      "label": "Sobre"
+    },
+    {
+      "id": "destaque",
+      "index": "03",
+      "label": "Destaque"
+    },
+    {
+      "id": "systagio",
+      "index": "04",
+      "label": "Systagio"
+    },
+    {
+      "id": "projetos",
+      "index": "05",
+      "label": "Projetos"
+    },
+    {
+      "id": "stack",
+      "index": "06",
+      "label": "Stack"
+    },
+    {
+      "id": "contato",
+      "index": "07",
+      "label": "Contato"
+    }
   ],
   "hero": {
     "eyebrow": "Sites · sistemas · APIs · Orçamento pelo WhatsApp",
@@ -73,7 +101,11 @@
       "Em sistemas reais, a mesma lógica de <strong>upload e armazenamento</strong> voltava a aparecer projeto após projeto. Tratei isso como decisão de <strong>arquitetura</strong>: centralizar responsabilidades, padronizar contratos e evoluir sem acoplamento.",
       "Daí surgiu um <strong>microserviço em Rust</strong> para arquivos — isolamento por projeto e autenticação por chave — e hoje atuo como <strong>desenvolvedor de sistemas</strong>, unindo APIs, integrações e entregas web conforme o que cada projeto pede."
     ],
-    "tags": ["APIs", "Microserviços", "Arquitetura"],
+    "tags": [
+      "APIs",
+      "Microserviços",
+      "Arquitetura"
+    ],
     "stats": [
       {
         "title": "Formação",
@@ -85,7 +117,10 @@
       },
       {
         "title": "Stack em foco",
-        "items": ["Java", "Node.js"]
+        "items": [
+          "Java",
+          "Node.js"
+        ]
       }
     ]
   },
@@ -103,7 +138,14 @@
       "iconAlt": "Ícone DigiFin",
       "problem": "Apps de finanças são abandonados com facilidade; anotar gastos no dia a dia vira atrito e despesas pequenas acabam esquecidas.",
       "solution": "Assistente financeiro pelo <strong>WhatsApp</strong>: registre despesas e receitas em linguagem natural com o prefixo <code>fin</code>, sem instalar app. Resumos de saldo, dia e mês direto na conversa.",
-      "tags": ["Node.js", "TypeScript", "Fastify", "PostgreSQL", "Evolution API", "Groq (opcional)"],
+      "tags": [
+        "Node.js",
+        "TypeScript",
+        "Fastify",
+        "PostgreSQL",
+        "Evolution API",
+        "Groq (opcional)"
+      ],
       "highlights": [
         "Linguagem natural — <code>fin gastei 35 lanche</code>.",
         "Categorias automáticas nos lançamentos.",
@@ -123,14 +165,47 @@
     "siteCta": "Site do produto — saiba mais",
     "carouselHint": "Interface do sistema — clique na imagem para ampliar",
     "slides": [
-      { "webp": "img/systagio/Dashboard.webp", "png": "img/systagio/Dashboard.png", "alt": "Systagio — painel principal", "eager": true },
-      { "webp": "img/systagio/7-alunos.webp", "png": "img/systagio/7-alunos.png", "alt": "Systagio — gestão de alunos" },
-      { "webp": "img/systagio/8-empresas.webp", "png": "img/systagio/8-empresas.png", "alt": "Systagio — empresas conveniadas" },
-      { "webp": "img/systagio/9-estagios.webp", "png": "img/systagio/9-estagios.png", "alt": "Systagio — estágios" },
-      { "webp": "img/systagio/10-horarios.webp", "png": "img/systagio/10-horarios.png", "alt": "Systagio — horários" },
-      { "webp": "img/systagio/11-termoContrato.webp", "png": "img/systagio/11-termoContrato.png", "alt": "Systagio — termo de contrato" },
-      { "webp": "img/systagio/gerenciar-relatorio.webp", "png": "img/systagio/gerenciar-relatorio.png", "alt": "Systagio — gerenciar relatórios" },
-      { "webp": "img/systagio/relatorio-1.webp", "png": "img/systagio/relatorio-1.png", "alt": "Systagio — relatório" }
+      {
+        "webp": "img/systagio/Dashboard.webp",
+        "png": "img/systagio/Dashboard.png",
+        "alt": "Systagio — painel principal",
+        "eager": true
+      },
+      {
+        "webp": "img/systagio/7-alunos.webp",
+        "png": "img/systagio/7-alunos.png",
+        "alt": "Systagio — gestão de alunos"
+      },
+      {
+        "webp": "img/systagio/8-empresas.webp",
+        "png": "img/systagio/8-empresas.png",
+        "alt": "Systagio — empresas conveniadas"
+      },
+      {
+        "webp": "img/systagio/9-estagios.webp",
+        "png": "img/systagio/9-estagios.png",
+        "alt": "Systagio — estágios"
+      },
+      {
+        "webp": "img/systagio/10-horarios.webp",
+        "png": "img/systagio/10-horarios.png",
+        "alt": "Systagio — horários"
+      },
+      {
+        "webp": "img/systagio/11-termoContrato.webp",
+        "png": "img/systagio/11-termoContrato.png",
+        "alt": "Systagio — termo de contrato"
+      },
+      {
+        "webp": "img/systagio/gerenciar-relatorio.webp",
+        "png": "img/systagio/gerenciar-relatorio.png",
+        "alt": "Systagio — gerenciar relatórios"
+      },
+      {
+        "webp": "img/systagio/relatorio-1.webp",
+        "png": "img/systagio/relatorio-1.png",
+        "alt": "Systagio — relatório"
+      }
     ],
     "sections": [
       {
@@ -146,7 +221,13 @@
       },
       {
         "title": "Escopo técnico",
-        "tags": ["Next.js", "TypeScript", "Node.js", "Deploy em VPS", "Backup BD · diário · 90 dias"]
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "Deploy em VPS",
+          "Backup BD · diário · 90 dias"
+        ]
       },
       {
         "title": "Para quem interessa",
@@ -168,7 +249,11 @@
         "thumbPng": "img/filestorage/icon.png",
         "thumbAlt": "File Storage Service",
         "thumbIcon": true,
-        "tags": ["Rust", "HTTP / REST", "Docker"],
+        "tags": [
+          "Rust",
+          "HTTP / REST",
+          "Docker"
+        ],
         "linkUrl": "https://github.com/robertlindomar/file-storage-rust",
         "linkLabel": "Código no GitHub →"
       },
@@ -179,7 +264,11 @@
         "thumbWebp": "img/espacocarioca/capa.webp",
         "thumbPng": "img/espacocarioca/capa.png",
         "thumbAlt": "Cardápio digital Espaço Carioca",
-        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "tags": [
+          "HTML",
+          "Tailwind",
+          "JavaScript"
+        ],
         "linkUrl": "https://espacocarioca.digiproltda.com.br",
         "linkLabel": "Visitar →"
       },
@@ -190,7 +279,11 @@
         "thumbWebp": "img/guto/capa.webp",
         "thumbPng": "img/guto/capa.png",
         "thumbAlt": "Site estúdio Arte na Pele",
-        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "tags": [
+          "HTML",
+          "Tailwind",
+          "JavaScript"
+        ],
         "linkUrl": "http://gutotattoo.robertlindomar.tech",
         "linkLabel": "Demo →"
       },
@@ -201,7 +294,11 @@
         "thumbWebp": "img/digipro/capa.webp",
         "thumbPng": "img/digipro/capa.png",
         "thumbAlt": "Site institucional DigiPro",
-        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "tags": [
+          "HTML",
+          "Tailwind",
+          "JavaScript"
+        ],
         "linkUrl": "https://digiproltda.com.br",
         "linkLabel": "Visitar →"
       },
@@ -212,7 +309,11 @@
         "thumbWebp": "img/centroempresarial/capa.webp",
         "thumbPng": "img/centroempresarial/capa.png",
         "thumbAlt": "Landing Centro Empresarial do Interior — Catanduva",
-        "tags": ["HTML", "Tailwind", "JavaScript"],
+        "tags": [
+          "HTML",
+          "Tailwind",
+          "JavaScript"
+        ],
         "linkUrl": "https://centroempresarial.agenciag3.com.br/",
         "linkLabel": "Visitar →"
       }
@@ -223,17 +324,54 @@
     "title": "Stack & engenharia",
     "subtitle": "Capacidades e ferramentas que uso em sistemas, APIs, dados e infraestrutura.",
     "skills": [
-      { "title": "APIs REST", "description": "Contratos claros, recursos bem definidos e versionamento pragmático." },
-      { "title": "Arquitetura em camadas", "description": "Separação entre domínio, integração e infraestrutura quando o contexto exige." },
-      { "title": "Microserviços", "description": "Serviços com fronteiras claras, integração por API e isolamento de responsabilidades." },
-      { "title": "Integração entre sistemas", "description": "Consumo e exposição de APIs, autenticação por chave e contratos estáveis." },
-      { "title": "Bancos relacionais", "description": "Modelagem e consultas em cenários de aplicação reais." },
-      { "title": "Deploy e infraestrutura", "description": "Containerização com Docker e operação em VPS quando o projeto demanda." }
+      {
+        "title": "APIs REST",
+        "description": "Contratos claros, recursos bem definidos e versionamento pragmático."
+      },
+      {
+        "title": "Arquitetura em camadas",
+        "description": "Separação entre domínio, integração e infraestrutura quando o contexto exige."
+      },
+      {
+        "title": "Microserviços",
+        "description": "Serviços com fronteiras claras, integração por API e isolamento de responsabilidades."
+      },
+      {
+        "title": "Integração entre sistemas",
+        "description": "Consumo e exposição de APIs, autenticação por chave e contratos estáveis."
+      },
+      {
+        "title": "Bancos relacionais",
+        "description": "Modelagem e consultas em cenários de aplicação reais."
+      },
+      {
+        "title": "Deploy e infraestrutura",
+        "description": "Containerização com Docker e operação em VPS quando o projeto demanda."
+      }
     ],
     "tools": [
-      { "title": "Linguagens", "items": ["Java", "Node.js", "Rust"] },
-      { "title": "Banco de dados", "items": ["PostgreSQL", "MySQL"] },
-      { "title": "Infraestrutura", "items": ["Docker", "VPS"] }
+      {
+        "title": "Linguagens",
+        "items": [
+          "Java",
+          "Node.js",
+          "Rust"
+        ]
+      },
+      {
+        "title": "Banco de dados",
+        "items": [
+          "PostgreSQL",
+          "MySQL"
+        ]
+      },
+      {
+        "title": "Infraestrutura",
+        "items": [
+          "Docker",
+          "VPS"
+        ]
+      }
     ]
   },
   "contactSection": {
