@@ -8,6 +8,7 @@
 <meta name="color-scheme" content="dark light">
 <link rel="preload" href="/{{person.photo}}" as="image" fetchpriority="high">
 <link rel="stylesheet" href="css/portfolio.css">
+<link rel="stylesheet" href="css/version-switcher.css">
 <script>
 (function () {
   var saved = localStorage.getItem('portfolio-theme');
@@ -320,14 +321,11 @@
 
     <footer class="p-footer">
         <p>© <span data-year></span> {{person.name}}. Todos os direitos reservados.</p>
-        <p class="p-footer__version"><a href="{{versions.v1.url}}">{{versions.v1.label}}</a></p>
     </footer>
 
 </main>
 
-<a href="{{{urls.whatsapp}}}" class="p-wa-float" target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento no WhatsApp">
-    <span aria-hidden="true">{{contactSection.floatLabel}}</span>
-</a>
+{{> versionSwitcher}}
 
 <div id="systagio-lightbox" class="p-lightbox" role="dialog" aria-modal="true" aria-labelledby="systagio-lightbox-title" aria-hidden="true">
     <div class="p-lightbox__backdrop" data-lightbox-close tabindex="-1"></div>
@@ -340,6 +338,7 @@
     <p class="p-lightbox__hint">Esc ou clique fora para fechar</p>
 </div>
 
+<script src="js/version-switcher.js"></script>
 <script src="js/portfolio.js"></script>
 </body>
 </html>

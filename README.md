@@ -40,14 +40,16 @@ A Vercel executa `npm run build` automaticamente no deploy.
 ## Estrutura
 
 ```
-content/site.json       ← fonte única de dados
-versions/v1/            ← template + assets da v1
-versions/v2/            ← template + assets da v2
-scripts/build.mjs       ← gera HTML e copia assets
-index.html              ← gerado (v2)
-v1/index.html           ← gerado (v1)
-img/                    ← imagens compartilhadas
+content/site.json       ← edite aqui (textos, projetos, contato)
+versions/v1/            ← design arquivo (Tailwind)
+versions/v2/            ← design atual
+scripts/build.mjs       ← gera o site
+index.html + css/ + js/ ← v2 publicada (gerado)
+v1/                     ← v1 publicada (gerado)
+img/ + fonts/           ← compartilhados
 ```
+
+**Não edite** `index.html`, `v1/` ou `css/portfolio.css` na raiz — são gerados pelo build.
 
 ## Desenvolvimento local
 

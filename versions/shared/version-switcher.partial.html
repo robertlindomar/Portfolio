@@ -1,0 +1,29 @@
+<div class="p-ver" id="version-picker" data-active="{{activeVersion}}">
+    <button type="button" class="p-ver__trigger" id="version-picker-btn" aria-expanded="false" aria-controls="version-picker-panel" aria-haspopup="dialog">
+        <span class="p-ver__trigger-icon" aria-hidden="true">◇</span>
+        <span class="p-ver__trigger-text">{{versions.pickerButton}}</span>
+        <span class="p-ver__trigger-current">{{#if isV2}}{{versions.v2.short}}{{else}}{{versions.v1.short}}{{/if}}</span>
+    </button>
+    <div class="p-ver__panel" id="version-picker-panel" role="dialog" aria-labelledby="version-picker-title" aria-hidden="true" hidden>
+        <p class="p-ver__panel-title" id="version-picker-title">{{versions.pickerTitle}}</p>
+        <div class="p-ver__cards">
+            <a href="{{versions.v2.url}}" class="p-ver__card{{#if isV2}} is-active{{/if}}">
+                <span class="p-ver__card-head">
+                    <span class="p-ver__card-name">{{versions.v2.name}}</span>
+                    <span class="p-ver__card-badge">{{versions.v2.badge}}</span>
+                </span>
+                <span class="p-ver__card-desc">{{versions.v2.description}}</span>
+                {{#if isV2}}<span class="p-ver__card-here">Você está aqui</span>{{/if}}
+            </a>
+            <a href="{{versions.v1.url}}" class="p-ver__card{{#unless isV2}} is-active{{/unless}}">
+                <span class="p-ver__card-head">
+                    <span class="p-ver__card-name">{{versions.v1.name}}</span>
+                    <span class="p-ver__card-badge p-ver__card-badge--muted">{{versions.v1.badge}}</span>
+                </span>
+                <span class="p-ver__card-desc">{{versions.v1.description}}</span>
+                {{#unless isV2}}<span class="p-ver__card-here">Você está aqui</span>{{/unless}}
+            </a>
+        </div>
+    </div>
+    <button type="button" class="p-ver__backdrop" id="version-picker-backdrop" aria-label="Fechar seletor de versão" hidden></button>
+</div>

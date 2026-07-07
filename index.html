@@ -8,6 +8,7 @@
 <meta name="color-scheme" content="dark light">
 <link rel="preload" href="/img/eugpt.png" as="image" fetchpriority="high">
 <link rel="stylesheet" href="css/portfolio.css">
+<link rel="stylesheet" href="css/version-switcher.css">
 <script>
 (function () {
   var saved = localStorage.getItem('portfolio-theme');
@@ -468,14 +469,39 @@
 
     <footer class="p-footer">
         <p>© <span data-year></span> Robert Lindomar. Todos os direitos reservados.</p>
-        <p class="p-footer__version"><a href="/v1/">Ver versão 1 (arquivo)</a></p>
     </footer>
 
 </main>
 
-<a href="https://api.whatsapp.com/send?phone=5567998911380&text=Ol%C3%A1%20Robert!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento." class="p-wa-float" target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento no WhatsApp">
-    <span aria-hidden="true">WhatsApp</span>
-</a>
+<div class="p-ver" id="version-picker" data-active="v2">
+    <button type="button" class="p-ver__trigger" id="version-picker-btn" aria-expanded="false" aria-controls="version-picker-panel" aria-haspopup="dialog">
+        <span class="p-ver__trigger-icon" aria-hidden="true">◇</span>
+        <span class="p-ver__trigger-text">Versões</span>
+        <span class="p-ver__trigger-current">v2</span>
+    </button>
+    <div class="p-ver__panel" id="version-picker-panel" role="dialog" aria-labelledby="version-picker-title" aria-hidden="true" hidden>
+        <p class="p-ver__panel-title" id="version-picker-title">Escolha como ver o portfólio</p>
+        <div class="p-ver__cards">
+            <a href="/" class="p-ver__card is-active">
+                <span class="p-ver__card-head">
+                    <span class="p-ver__card-name">Versão 2</span>
+                    <span class="p-ver__card-badge">Atual</span>
+                </span>
+                <span class="p-ver__card-desc">Redesign Contract Surface</span>
+                <span class="p-ver__card-here">Você está aqui</span>
+            </a>
+            <a href="/v1/" class="p-ver__card">
+                <span class="p-ver__card-head">
+                    <span class="p-ver__card-name">Versão 1</span>
+                    <span class="p-ver__card-badge p-ver__card-badge--muted">Arquivo</span>
+                </span>
+                <span class="p-ver__card-desc">Design original — Tailwind emerald</span>
+                
+            </a>
+        </div>
+    </div>
+    <button type="button" class="p-ver__backdrop" id="version-picker-backdrop" aria-label="Fechar seletor de versão" hidden></button>
+</div>
 
 <div id="systagio-lightbox" class="p-lightbox" role="dialog" aria-modal="true" aria-labelledby="systagio-lightbox-title" aria-hidden="true">
     <div class="p-lightbox__backdrop" data-lightbox-close tabindex="-1"></div>
@@ -488,6 +514,7 @@
     <p class="p-lightbox__hint">Esc ou clique fora para fechar</p>
 </div>
 
+<script src="js/version-switcher.js"></script>
 <script src="js/portfolio.js"></script>
 </body>
 </html>

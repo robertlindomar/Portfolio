@@ -16,9 +16,30 @@ function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
+function emptyDir(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir)) {
+    const p = path.join(dir, entry);
+    fs.rmSync(p, { recursive: true, force: true });
+  }
+}
+
 function copyDir(src, dest) {
   ensureDir(dest);
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const from = path.join(src, entry.name);
+    const to = path.join(dest, entry.name);
+    if (entry.isDirectory()) copyDir(from, to);
+    else fs.copyFileSync(from, to);
+  }
+}
+
+function syncDir(src, dest, exclude) {
+  const skip = new Set(exclude || []);
+  emptyDir(dest);
+  ensureDir(dest);
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (skip.has(entry.name)) continue;
     const from = path.join(src, entry.name);
     const to = path.join(dest, entry.name);
     if (entry.isDirectory()) copyDir(from, to);
@@ -79,6 +100,27 @@ function renderTemplate(templatePath, data) {
   return template(data);
 }
 
+function withVersion(data, version) {
+  return Object.assign({}, data, {
+    activeVersion: version,
+    isV2: version === 'v2',
+  });
+}
+
+function copySharedAssets() {
+  const shared = path.join(root, 'versions/shared');
+  const files = [
+    ['version-switcher.js', path.join(root, 'js/version-switcher.js')],
+    ['version-switcher.js', path.join(root, 'v1/js/version-switcher.js')],
+    ['version-switcher.css', path.join(root, 'css/version-switcher.css')],
+    ['version-switcher.css', path.join(root, 'v1/css/version-switcher.css')],
+  ];
+  for (const [name, dest] of files) {
+    ensureDir(path.dirname(dest));
+    fs.copyFileSync(path.join(shared, name), dest);
+  }
+}
+
 function buildV1Css() {
   const input = path.join(root, 'versions/v1/assets/css/tailwind-input.css');
   const output = path.join(root, 'versions/v1/assets/css/tailwind-built.css');
@@ -90,27 +132,33 @@ function buildV1Css() {
 }
 
 function main() {
+  const partialPath = path.join(root, 'versions/shared/version-switcher.partial.html');
+  Handlebars.registerPartial('versionSwitcher', fs.readFileSync(partialPath, 'utf8'));
+
   const data = enrichData(readJson(path.join(root, 'content/site.json')));
 
   console.log('Building v1 CSS (Tailwind)...');
   buildV1Css();
 
   console.log('Rendering v2 → index.html');
-  const v2Html = renderTemplate(path.join(root, 'versions/v2/template.html'), data);
+  const v2Html = renderTemplate(path.join(root, 'versions/v2/template.html'), withVersion(data, 'v2'));
   fs.writeFileSync(path.join(root, 'index.html'), v2Html);
 
   console.log('Rendering v1 → v1/index.html');
-  const v1Html = renderTemplate(path.join(root, 'versions/v1/template.html'), data);
+  const v1Html = renderTemplate(path.join(root, 'versions/v1/template.html'), withVersion(data, 'v1'));
   ensureDir(path.join(root, 'v1'));
   fs.writeFileSync(path.join(root, 'v1/index.html'), v1Html);
 
   console.log('Copying v2 assets...');
-  copyDir(path.join(root, 'versions/v2/assets/css'), path.join(root, 'css'));
-  copyDir(path.join(root, 'versions/v2/assets/js'), path.join(root, 'js'));
+  syncDir(path.join(root, 'versions/v2/assets/css'), path.join(root, 'css'));
+  syncDir(path.join(root, 'versions/v2/assets/js'), path.join(root, 'js'));
 
   console.log('Copying v1 assets...');
-  copyDir(path.join(root, 'versions/v1/assets/css'), path.join(root, 'v1/css'));
-  copyDir(path.join(root, 'versions/v1/assets/js'), path.join(root, 'v1/js'));
+  syncDir(path.join(root, 'versions/v1/assets/css'), path.join(root, 'v1/css'), ['tailwind-input.css']);
+  syncDir(path.join(root, 'versions/v1/assets/js'), path.join(root, 'v1/js'));
+
+  console.log('Copying shared assets...');
+  copySharedAssets();
 
   console.log('Build complete.');
 }

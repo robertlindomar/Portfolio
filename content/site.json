@@ -26,12 +26,23 @@
     }
   },
   "versions": {
-    "current": "v2",
+    "pickerButton": "Versões",
+    "pickerTitle": "Escolha como ver o portfólio",
     "v1": {
+      "id": "v1",
+      "short": "v1",
+      "name": "Versão 1",
+      "badge": "Arquivo",
+      "description": "Design original — Tailwind emerald",
       "label": "Ver versão 1 (arquivo)",
       "url": "/v1/"
     },
     "v2": {
+      "id": "v2",
+      "short": "v2",
+      "name": "Versão 2",
+      "badge": "Atual",
+      "description": "Redesign Contract Surface",
       "label": "Ver versão 2 (atual)",
       "url": "/"
     }
